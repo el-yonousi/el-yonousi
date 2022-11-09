@@ -1,0 +1,93 @@
+<template>
+  <section class="dark:bg-dark-2 md:py-12 py-16" id="footer">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center items-center gap-6">
+        <div class="flex-[30%] flex flex-col md:text-xl text-lg gap-6">
+          <div>
+            <strong class="dark:text-dark-5">Address</strong>
+            <address class="dark:text-dark-4 font-semibold">
+              Bujarrah, Jabal Boiblan street, Tetouan, MA 93040
+            </address>
+          </div>
+          <div>
+            <strong class="dark:text-dark-5"> Feedback</strong>
+            <p class="dark:text-dark-4 font-semibold">
+              Please send us your ideas, bug reports, suggestions! Any feedback would be
+              appreciated.
+            </p>
+          </div>
+          <div>
+            <strong class="dark:text-dark-5" v-text="'Contacts'" />
+            <ul>
+              <li>
+                <span class="dark:text-dark-4 font-bold" v-text="'Email: '" />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-casetrue font-semibold hover:text-casetrue-2"
+                  href="mailto:elyonousimohamed@gmail.com"
+                  v-text="'elyonousimohamed@gmail.com'"
+                />
+              </li>
+              <li>
+                <span class="dark:text-dark-4 font-bold" v-text="'Phone: '" />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="tel:+212603476173"
+                  class="text-casetrue font-semibold hover:text-casetrue-2"
+                  v-text="'+212 60 347 6173'"
+                />
+              </li>
+              <li>
+                <span class="dark:text-dark-4 font-bold" v-text="'Wtsp: '" />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="http://wa.me/+212603476173"
+                  class="text-casetrue font-semibold hover:text-casetrue-2"
+                  v-text="'+212 60 347 6173'"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="flex gap-2">
+            <a
+              href="https://github.com/el-yonousi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="mdi:github" class="w-10 h-10 text-dark-4 hover:text-dark-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/elyonousi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="mdi:linkedin" class="w-10 h-10 text-dark-4 hover:text-dark-5" />
+            </a>
+          </div>
+        </div>
+        <iframe
+          class="flex-[30%] rounded"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d802.6511906358612!2d-5.349084029222774!3d35.59318359876343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b431db3781697%3A0x6d88ee3aff3b4418!2z2KrYt9mI2KfZhg!5e1!3m2!1sar!2sma!4v1661353053722!5m2!1sar!2sma"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen="true"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        />
+      </div>
+      <div class="dark:text-dark-4 font-semibold flex gap-3 pt-6">
+        Made With
+        <Icon name="mdi:heart" class="w-5 h-5" />
+        <span>
+          By Mohamed EL YONOUSI - ©
+          <strong v-text="new Date().getFullYear()"></strong>
+          All Rights Reserved
+        </span>
+      </div>
+    </div>
+  </section>
+</template>
