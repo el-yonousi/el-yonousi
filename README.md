@@ -11,7 +11,18 @@ I am Mohamed EL YONOUSI, born on 05/03/1996, holder of a technical diploma speci
 - :dart: I focus on making high-quality decisions.
 
 ## :phone: Contact Me
+<!-- 
 > - [x] **Linkedin** [Mohamed EL YONOUSI](https://www.linkedin.com/in/elyonousi)
 > - [x] **Whatsapp** [+212603476173](https://api.whatsapp.com/send/?phone=212603476173&text=github)
 > - [x] **Phone** [+212603476173](212603476173)
 > - [x] **Email** [elyonousimohamed@gmail.com](elyonousimohamed@gmail.com)
+-->
+
+```json
+{
+  "Linkedin": "https://www.linkedin.com/in/elyonousi",
+  "Whatsapp": "https://api.whatsapp.com/send/?phone=212603476173&text=github",
+  "Phone": "+212603476173",
+  "Email": "elyonousimohamed@gmail.com",
+}
+```
