@@ -1,42 +1,17 @@
-# Nuxt 3 Minimal Starter
+# Mohamed EL YONOUSI
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+[LinkedIn](https://www.linkedin.com/in/elyonousi/)
+[Whatsapp](https://wa.me/212603476173)
 
-## Setup
+<a href="tel:212603476173">+212603476173</a>
+<a href="mailme:elyonousimohamed@gmail.com">elyonousimohamed@gmail.com</a>
 
-Make sure to install the dependencies:
+## About Me
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+I love researching and solving problems using modern technology. I create, maintain, and improve websites.
+I love to win, but helping the team win makes me happy
+- I educate, refine and push myself to be a better person
+- I constantly learning
+- I stay calm when facing adversity
+- I focus on making high-quality decisions
+I am Mohamed EL YONOUSI, born on 05/03/1996, holder of a technical diploma specialized in information technology development at the Institute Specialized In Offshoring Professions in Tetouan.
