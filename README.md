@@ -1,17 +1,17 @@
-# Mohamed EL YONOUSI
+# Mohamed EL YONOUSI :morocco:
+<p>I am Mohamed EL YONOUSI, born on 05/03/1996, holder of a technical diploma specialized in information technology development at the Institute Specialized In Offshoring Professions in Tetouan.</p>
 
-[LinkedIn](https://www.linkedin.com/in/elyonousi/)
-[Whatsapp](https://wa.me/212603476173)
+## :man_technologist: About Me
+- :hammer_and_wrench: I love researching and solving problems using modern technology. 
+- :writing_hand: I create, maintain, and improve websites.
+- :clap: I love to win, but helping the team win makes me happy
+- :books: I educate, refine and push myself to be a better person.
+- :pushpin: I constantly learning.
+- :magic_wand: I stay calm when facing adversity.
+- :dart: I focus on making high-quality decisions.
 
-<a href="tel:212603476173">+212603476173</a>
-<a href="mailme:elyonousimohamed@gmail.com">elyonousimohamed@gmail.com</a>
-
-## About Me
-
-I love researching and solving problems using modern technology. I create, maintain, and improve websites.
-I love to win, but helping the team win makes me happy
-- I educate, refine and push myself to be a better person
-- I constantly learning
-- I stay calm when facing adversity
-- I focus on making high-quality decisions
-I am Mohamed EL YONOUSI, born on 05/03/1996, holder of a technical diploma specialized in information technology development at the Institute Specialized In Offshoring Professions in Tetouan.
+## :phone: Contact Me
+> - [x] <b>Linkedin</b> [Mohamed EL YONOUSI](https://www.linkedin.com/in/elyonousi)
+> - [x] <b>Whatsapp</b> [+212603476173](https://api.whatsapp.com/send/?phone=212603476173&text=github)
+> - [x] <b>Phone</b> [+212603476173](212603476173)
+> - [x] <b>Email</b> [elyonousimohamed@gmail.com](elyonousimohamed@gmail.com)
