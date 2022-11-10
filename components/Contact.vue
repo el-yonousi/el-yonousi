@@ -8,7 +8,7 @@
       <form
         class="flex flex-col gap-3 md:w-[80%]"
         name="contact"
-        action="/pages/success"
+        action="/success"
         method="POST"
         data-netlify="true"
       >
