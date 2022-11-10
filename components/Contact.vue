@@ -5,7 +5,8 @@
   >
     <div class="md:flex-[50%] flex-[100%] flex flex-col md:items-center">
       <heading :text="'contact me'" :classes="'!text-5xl'" />
-      <form class="flex flex-col gap-3 md:w-[80%]" name="contact" netlify>
+      <form class="flex flex-col gap-3 md:w-[80%]" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
         <div class="w-full">
           <label for="fullName"></label>
           <input
@@ -39,6 +40,18 @@
             name="message"
             id="message"
           />
+        </div>
+        <div class="w-full">
+          <div data-netlify-recaptcha="true"> </div>
+          <!-- <input
+            class="dark:bg-dark-2 dark:text-dark-4 text-dark-2 w-full rounded dark:border-0 md:text-lg text-base md:p-6 p-4"
+            autocomplete="off"
+            placeholder="Enter your full name here"
+            type="text"
+            name="fullName"
+            id="fullName"
+            required
+          /> -->
         </div>
         <div class="w-full">
           <input
