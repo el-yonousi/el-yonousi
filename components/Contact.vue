@@ -47,6 +47,18 @@
           />
         </div>
         <div class="w-full">
+          <div data-netlify-recaptcha="true"></div>
+          <!-- <input
+            class="dark:bg-dark-2 dark:text-dark-4 text-dark-2 w-full rounded dark:border-0 md:text-lg text-base md:p-6 p-4"
+            autocomplete="off"
+            placeholder="Enter your full name here"
+            type="text"
+            name="fullName"
+            id="fullName"
+            required
+          /> -->
+        </div>
+        <div class="w-full">
           <input
             type="submit"
             class="capitalize bg-casetrue text-white rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4"
