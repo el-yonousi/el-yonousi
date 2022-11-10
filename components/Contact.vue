@@ -5,7 +5,7 @@
   >
     <div class="md:flex-[50%] flex-[100%] flex flex-col md:items-center">
       <heading :text="'contact me'" :classes="'!text-5xl'" />
-      <form class="flex flex-col gap-3 md:w-[80%]" name="contact" @submit.prevent data-netlify="true" method="POST">
+      <form class="flex flex-col gap-3 md:w-[80%]" name="contact" netlify>
         <div class="w-full">
           <label for="fullName"></label>
           <input
