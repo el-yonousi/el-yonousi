@@ -1,5 +1,5 @@
 # Mohamed EL YONOUSI :morocco:
-<p>I am Mohamed EL YONOUSI, born on 05/03/1996, holder of a technical diploma specialized in information technology development at the Institute Specialized In Offshoring Professions in Tetouan.</p>
+I am Mohamed EL YONOUSI, born on 05/03/1996, holder of a technical diploma specialized in information technology development at the Institute Specialized In Offshoring Professions in Tetouan.
 
 ## :man_technologist: About Me
 - :hammer_and_wrench: I love researching and solving problems using modern technology. 
@@ -11,7 +11,7 @@
 - :dart: I focus on making high-quality decisions.
 
 ## :phone: Contact Me
-> - [x] <b>Linkedin</b> [Mohamed EL YONOUSI](https://www.linkedin.com/in/elyonousi)
-> - [x] <b>Whatsapp</b> [+212603476173](https://api.whatsapp.com/send/?phone=212603476173&text=github)
-> - [x] <b>Phone</b> [+212603476173](212603476173)
-> - [x] <b>Email</b> [elyonousimohamed@gmail.com](elyonousimohamed@gmail.com)
+> - [x] **Linkedin** [Mohamed EL YONOUSI](https://www.linkedin.com/in/elyonousi)
+> - [x] **Whatsapp** [+212603476173](https://api.whatsapp.com/send/?phone=212603476173&text=github)
+> - [x] **Phone** [+212603476173](212603476173)
+> - [x] **Email** [elyonousimohamed@gmail.com](elyonousimohamed@gmail.com)
