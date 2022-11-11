@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 				dir: 'ltr',
 			},
 			bodyAttrs: {
-				class: "dark:bg-dark-1 bg-white",
+				// class: "",
 			},
 		}
 	},
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 
 	tailwindcss: {
 		cssPath: '~/assets/css/tailwind.css',
-		configPath: 'tailwind.config.js',
+		configPath: 'tailwind.config.ts',
 		exposeConfig: false,
 		// config: {},
 		injectPosition: 0,
@@ -47,5 +47,10 @@ export default defineNuxtConfig({
 		storageKey: 'nuxt-color-mode'
 	},
 
-	plugins: ['~/plugins/scroll.js', '~/plugins/follow-scroll.js']
+	runtimeConfig: {
+		accessTokens: process.env.PERSONAL_ACCESS_TOKENS,
+		githubApi: process.env.GITHUB_API,
+	},
+
+	plugins: []
 })

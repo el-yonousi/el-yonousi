@@ -9,7 +9,7 @@ export default defineEventHandler(() => [{
     {
         date: "Mars, 2020",
         title: "doing",
-        description: "Doing, is a mobile application that enables the user to create, delete and modify daily tasks in an easy and simple way, with three languages (Arabic, French, and English) and light and dark mode. ",
+        description: "Doing, is a mobile application that enables the user to create, delete and modify daily tasks in an easy and simple way, light/dark mode.",
         link: "https://play.google.com/store/apps/details?id=net.casetrue.doing",
         tools: ['XML', 'JAVA', 'Android Studio', 'Sqlite'],
         cover: "/img/doing-cover.webp",

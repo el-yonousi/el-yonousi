@@ -2,7 +2,9 @@
   <container class="px-4 sm:px-6" id="whatcando">
     <div class="flex md:flex-nowrap flex-wrap gap-6">
       <div class="flex-[50%]">
-        <heading :text="'What can i do?'" :classes="'!text-7xl'" />
+        <heading>
+          <span v-text="'What can i do?'" />
+        </heading>
         <p class="text-xl text-dark-4">
           Create full stack web development from scratch, repair old websites, and Add a
           new twist to ancient sites.
@@ -29,8 +31,6 @@
     </div>
   </container>
 </template>
-
-
 
 <script setup>
 const { data } = await useAsyncData("whatCanDo", () => $fetch("/api/whatCanDo"));

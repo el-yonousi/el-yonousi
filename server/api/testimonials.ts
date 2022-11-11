@@ -15,6 +15,7 @@ export default defineEventHandler(() => [{
         `,
     relationship: "teacher",
     status: 'Information Systems Engineering',
+    url: 'https://www.linkedin.com/in/oussama-rahmouni-bb034624',
 },
 {
     profile: "/img/yamin-mechqi.png",
@@ -23,6 +24,7 @@ export default defineEventHandler(() => [{
         All the best Mohammad`,
     relationship: "teacher",
     status: 'Senior Software Engineer at Tanger Med Compte officiel - TMSA',
+    url: 'https://www.linkedin.com/in/yamin-mechqi',
 },
 {
     profile: "/img/van-acker.png",
@@ -30,6 +32,7 @@ export default defineEventHandler(() => [{
     recommendation: `The Donatelife project as part of the City'zen challenge was carried out With great rigor and a very strong investment by Mohamed.`,
     relationship: "Mentor",
     status: 'Director of Small and Medium Account Customer Services | Berger Levrault',
+    url: 'https://www.linkedin.com/in/nicolas-van-acker-0a0316105',
 },
 {
     profile: "/img/karima-el-khayati.png",
@@ -38,6 +41,7 @@ export default defineEventHandler(() => [{
         I highly recommend his skills.`,
     relationship: "Colleague",
     status: 'Junior developer at NTT DATA',
+    url: 'https://www.linkedin.com/in/karima-el-khayati',
 },
 {
     profile: "/img/mounia-belhaj.png",
@@ -45,6 +49,7 @@ export default defineEventHandler(() => [{
     recommendation: `Mohamed El YONOUSI, we were colleagues at ISMO for 2 years, we worked together on many projects that I can say Mohamed is a great teammate, he helped me to understand many things in the IT world as well as he's a serious, curious, hardworking man. It was a pleasure to work with you, Mohamed`,
     relationship: "Colleague",
     status: 'SISnet Java Developer at NTT DATA',
+    url: 'https://www.linkedin.com/in/mouniabelhaj1',
 },
 {
     profile: "/img/youssef-hammouda.png",
@@ -52,6 +57,7 @@ export default defineEventHandler(() => [{
     recommendation: `The best UI designer I've met, professional and flexible, it was an honor working with you in the same team.`,
     relationship: "Colleague",
     status: 'CityZen challenge 5 : 2nd prize winners 🥈',
+    url: 'https://www.linkedin.com/in/youssef-hammouda',
 },
 {
     profile: "/img/adnane-el-biat.png",
@@ -59,6 +65,7 @@ export default defineEventHandler(() => [{
     recommendation: `The best UI designer I've met, professional and flexible, it was an honor working with you in the same team.`,
     relationship: "Colleague",
     status: 'Full Stack Developer',
+    url: 'https://www.linkedin.com/in/elbiat-adnane-0a18a91a2',
 },
 {
     profile: "/img/zayd-el-imrani.png",
@@ -67,5 +74,6 @@ export default defineEventHandler(() => [{
         I am grateful that I had worked with you.`,
     relationship: "Colleague",
     status: 'Fullstack developer ( C# | .NET Core | Angular ) at NTT DATA',
+    url: 'https://www.linkedin.com/in/zaydimr'
 },
 ]);

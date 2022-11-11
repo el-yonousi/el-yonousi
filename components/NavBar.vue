@@ -3,7 +3,6 @@
     class="fixed border-dark-4 shadow-[0_0_1px_0px_rgba(255,255,255,0.3)] dark:bg-dark-1 dark:bg-opacity-80 left-0 md:top-2/4 bottom-0 md:translate-y-[-50%] md:w-fit w-full h-fit z-50 flex md:flex-col flex-row justify-center items-center gap-3 transition-all duration-700"
   >
     <a
-      id="nav_icon"
       v-for="item in data"
       :key="item.name"
       :href="item.href"

@@ -3,8 +3,20 @@
 @tailwind utilities;
 @tailwind variants;
 
+*{
+	@apply p-0 m-0 box-border;
+}
+
 html {
-    @apply text-[16px] scroll-smooth overflow-x-hidden;
+    @apply text-[16px] scroll-smooth overflow-x-hidden scrollbar;
+}
+
+body {
+	@apply 
+	dark:bg-dark-1 
+	dark:text-dark-4 
+	dark:selection:bg-casetrue 
+	dark:selection:text-dark-1;
 }
 
 .page-enter-active,
@@ -18,9 +30,13 @@ html {
 }
 
 .active svg {
-	@apply dark:text-casetrue fill-black !important;
+	@apply dark:text-casetrue;
 }
 
 section {
 	@apply transition-all duration-300 ease-in-out;
+}
+
+img {
+	@apply select-none;
 }
