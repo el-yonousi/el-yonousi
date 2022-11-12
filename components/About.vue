@@ -22,17 +22,6 @@
         </div>
       </div>
       <div class="flex-[50%] md:flex hidden justify-center items-center shadow-xl">
-        <form name="contact" netlify>
-          <p>
-            <label>Name <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Email <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
         <Icon
           name="noto-v1:man-technologist-dark-skin-tone"
           class="grayscale w-52 h-52"
