@@ -79,7 +79,7 @@ const handleSubmit = async (event) => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
-    }).then(() => console.log("Form successfully submitted"));
+    }).then((response) => console.log(response));
   } catch (error) {
     console.error(error);
   }
