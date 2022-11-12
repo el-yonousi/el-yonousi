@@ -64,7 +64,7 @@
                 />
                 <a
                   :href="work.link"
-                  class="underline underline-offset-4 break-all"
+                  class="underline underline-offset-4 break-all decoration-1"
                   target="_blank"
                   rel="noopener noreferrer"
                   v-text="`&quot;${work.clone_url}&quot;`"
@@ -77,7 +77,7 @@
                 />
                 <a
                   :href="work.link"
-                  class="underline underline-offset-4 break-all"
+                  class="underline underline-offset-4 break-all decoration-1"
                   target="_blank"
                   rel="noopener noreferrer"
                   v-text="`&quot;${work.homepage}&quot;`"

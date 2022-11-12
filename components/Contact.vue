@@ -16,7 +16,7 @@
           name="custom-form"
           action="/form.success"
           method="POST"
-         netlify
+          netlify
         >
           <div class="w-full">
             <label for="fullName"></label>
