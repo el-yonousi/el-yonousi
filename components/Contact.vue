@@ -13,14 +13,13 @@
       <div class="md:flex-[50%] flex-[100%] flex flex-col md:items-center">
         <form
           class="flex flex-col gap-3 md:w-[80%]"
-          name="contact"
-          method="POST"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
+          @submit.prevent="handleSubmit"
+          name="signups"
+          netlify
         >
           <input type="hidden" name="form-name" value="contact" />
           <div class="w-full hidden">
-            <label for="fullName">Don't fill this out if you're human:</label>
+            <label>Don't fill this out if you're human:</label>
             <input name="bot-field" />
           </div>
           <div class="w-full">
@@ -69,3 +68,20 @@
     </div>
   </container>
 </template>
+
+<script setup>
+const handleSubmit = async (event) => {
+  try {
+    event.preventDefault();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    }).then(() => console.log("Form successfully submitted"));
+  } catch (error) {
+    console.error(error);
+  }
+};
+</script>
