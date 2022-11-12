@@ -62,7 +62,7 @@ export default defineEventHandler(() => [{
 {
     profile: "/img/adnane-el-biat.png",
     fullName: "Adnane EL BIAT",
-    recommendation: `The best UI designer I've met, professional and flexible, it was an honor working with you in the same team.`,
+    recommendation: `It was such a pleasure to take a few classes with you. he was always accommodating, kind, and motivated, and he is very applied and aims for high-quality work.`,
     relationship: "Colleague",
     status: 'Full Stack Developer',
     url: 'https://www.linkedin.com/in/elbiat-adnane-0a18a91a2',

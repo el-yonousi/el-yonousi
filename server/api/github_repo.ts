@@ -1,6 +1,6 @@
 export default defineEventHandler(async () => {
 	const { githubApi, accessTokens } = useRuntimeConfig()
-	const repos = ['el-yonousi', 'youtube', 'aiche_bois', 'dikri', 'doing']
+	const repos = ['el-yonousi', 'youtube', 'dikri', 'doing']
 
 	return await Promise.all(repos.map(name =>
 		fetch(`${githubApi}${name}`, {
