@@ -18,10 +18,10 @@
           netlify-honeypot="bot-field"
           data-netlify="true"
         >
-        <div class="w-full hidden">
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="w-full hidden">
             <label for="fullName">Don't fill this out if you're human:</label>
             <input name="bot-field" />
-            
           </div>
           <div class="w-full">
             <label for="fullName"></label>
