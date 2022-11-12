@@ -11,7 +11,18 @@
         <Icon name="tabler:zoom-code" class="w-52 h-52" />
       </div>
       <div class="md:flex-[50%] flex-[100%] flex flex-col md:items-center">
-        <form class="flex flex-col gap-3 md:w-[80%]" name="custom-form" netlify>
+        <form
+          class="flex flex-col gap-3 md:w-[80%]"
+          name="contact"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
+        <div class="w-full hidden">
+            <label for="fullName">Don't fill this out if you're human:</label>
+            <input name="bot-field" />
+            
+          </div>
           <div class="w-full">
             <label for="fullName"></label>
             <input
