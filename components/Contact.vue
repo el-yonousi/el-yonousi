@@ -11,7 +11,7 @@
         <Icon name="tabler:zoom-code" class="w-52 h-52" />
       </div>
       <div class="md:flex-[50%] flex-[100%] flex flex-col md:items-center">
-        <form
+        <!-- <form
           class="flex flex-col gap-3 md:w-[80%]"
           name="contact"
           method="POST"
@@ -64,8 +64,27 @@
               value="send message"
             />
           </div>
+        </form> -->
+        <form name="submit-to-google-sheet">
+          <input name="email" type="email" placeholder="Email" required />
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
   </container>
 </template>
+
+<script setup>
+if (process.client) {
+  const scriptURL =
+    "https://script.google.com/macros/s/mohamed-elyonousi.netlify.app/AKfycbxI43qfWlc-5zIDl93EgDmgMkEDM2r4sruL54tRKJq2lIa_v7BoQ_6b-9BcMpnoSq4N6w/exec";
+  const form = document.forms["submit-to-google-sheet"];
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => console.log("Success!", response))
+      .catch((error) => console.error("Error!", error.message));
+  });
+}
+</script>
