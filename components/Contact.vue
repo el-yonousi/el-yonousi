@@ -13,15 +13,11 @@
       <div class="md:flex-[50%] flex-[100%] flex flex-col md:items-center">
         <form
           class="flex flex-col gap-3 md:w-[80%]"
-          @submit.prevent="handleSubmit"
-          name="signups"
-          netlify
+          name="contactme"
+          action="/form.success"
+          method="POST"
+          data-netlify="true"
         >
-          <input type="hidden" name="form-name" value="contact" />
-          <div class="w-full hidden">
-            <label>Don't fill this out if you're human:</label>
-            <input name="bot-field" />
-          </div>
           <div class="w-full">
             <label for="fullName"></label>
             <input
@@ -68,20 +64,3 @@
     </div>
   </container>
 </template>
-
-<script setup>
-const handleSubmit = async (event) => {
-  try {
-    event.preventDefault();
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    }).then((response) => console.log(response));
-  } catch (error) {
-    console.error(error);
-  }
-};
-</script>
