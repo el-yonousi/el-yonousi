@@ -13,10 +13,10 @@
       <div class="md:flex-[50%] flex-[100%] flex flex-col md:items-center">
         <form
           class="flex flex-col gap-3 md:w-[80%]"
-          name="contact"
+          name="custom-form"
           action="/form.success"
           method="POST"
-          data-netlify="true"
+         netlify
         >
           <div class="w-full">
             <label for="fullName"></label>

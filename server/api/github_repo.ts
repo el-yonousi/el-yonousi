@@ -5,7 +5,7 @@ export default defineEventHandler(async () => {
 	return await Promise.all(repos.map(name =>
 		fetch(`${githubApi}${name}`, {
 			headers: {
-				// 'Authorization': accessTokens,
+				'Authorization': accessTokens,
 				'Content-Type': 'application/json'
 			}
 		}).then(resp => resp.json())
