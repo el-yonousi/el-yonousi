@@ -17,6 +17,7 @@
           action="/form.success"
           method="POST"
           data-netlify="true"
+          @submit.prevent="handleSubmitForm"
         >
           <div class="w-full">
             <label for="fullName"></label>
@@ -27,6 +28,7 @@
               type="text"
               name="fullName"
               id="fullName"
+              v-model="form.fullName"
               required
             />
           </div>
@@ -39,6 +41,7 @@
               type="email"
               name="email"
               id="email"
+              v-model="form.email"
               required
             />
           </div>
@@ -50,6 +53,7 @@
               placeholder="Enter your message here"
               name="message"
               id="message"
+              v-model="form.message"
             />
           </div>
           <div class="w-full">
@@ -64,3 +68,25 @@
     </div>
   </container>
 </template>
+
+<script setup>
+const router = useRouter();
+const form = {
+  fullName: "",
+  email: "",
+  message: "",
+};
+const client = useSupabaseClient();
+const handleSubmitForm = async (event) => {
+  const formData = new FormData(event.target);
+  const { error, data } = await client.from("forms").insert(form);
+  if (error) {
+    throw createError({
+      message: error.message,
+      statusCode: error.statusCode,
+      fatal: true,
+    });
+  }
+  router.push("/form.success");
+};
+</script>

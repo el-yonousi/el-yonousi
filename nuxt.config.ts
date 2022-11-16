@@ -24,7 +24,8 @@ export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/color-mode',
-		'nuxt-icon'
+		'nuxt-icon',
+		'@nuxtjs/supabase'
 	],
 
 	tailwindcss: {
@@ -50,6 +51,8 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		accessTokens: process.env.PERSONAL_ACCESS_TOKENS,
 		githubApi: process.env.GITHUB_API,
+		// supabaseUrl: process.env.SUPABASE_URL,
+		// supabaseKey: process.env.SUPABASE_KEY,
 	},
 
 	plugins: []

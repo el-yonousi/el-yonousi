@@ -12,7 +12,7 @@
       </div>
       <div class="flex-[50%] flex flex-col gap-6">
         <div
-          v-for="(what, index) in data"
+          v-for="(what, index) in what_can_do"
           :key="index + '-' + what"
           class="flex items-center justify-center gap-6"
         >
@@ -33,5 +33,5 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("whatCanDo", () => $fetch("/api/whatCanDo"));
+const { what_can_do } = await $fetch("/api/what_can_do");
 </script>

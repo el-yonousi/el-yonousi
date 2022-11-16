@@ -5,7 +5,7 @@
     </heading>
     <div class="flex flex-col gap-10">
       <div
-        v-for="(work, index) in data"
+        v-for="(work, index) in projects"
         :key="work.date + '-' + index"
         class="flex md:flex-nowrap flex-wrap md:gap-3 gap-6"
         :class="index % 2 == 0 ? 'md:flex-row' : 'md:flex-row-reverse'"
@@ -26,14 +26,7 @@
                   class="text-casetrue font-bold"
                   v-text="`&quot;date&quot;:&nbsp;`"
                 />
-                <span
-                  v-text="
-                    `&quot;${new Date(Date.parse(work.created_at)).toLocaleString(
-                      'en-us',
-                      { month: 'long', year: 'numeric' }
-                    )}&quot;,`
-                  "
-                />
+                <span v-text="`&quot;${work.date}&quot;,`" />
               </p>
               <p class="px-3">
                 <span
@@ -100,5 +93,5 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("github_repo", () => $fetch("/api/github_repo"));
+const { projects } = await $fetch("/api/projects");
 </script>
