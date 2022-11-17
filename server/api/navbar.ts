@@ -6,8 +6,8 @@ export default defineEventHandler(() => [
         current: true
     },
     {
-        name: "my works",
-        href: "#works",
+        name: "my experiences",
+        href: "#experiences",
         icon: 'eos-icons:job',
         current: false
     },

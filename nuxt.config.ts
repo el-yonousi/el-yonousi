@@ -55,5 +55,9 @@ export default defineNuxtConfig({
 		// supabaseKey: process.env.SUPABASE_KEY,
 	},
 
+	typescript: {
+		shim: false
+	},
+
 	plugins: []
 })

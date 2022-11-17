@@ -17,6 +17,7 @@
       </slot>
     </button>
     <div
+      :class="classes"
       class="card-wrapper grid grid-flow-col auto-cols-[280px] overflow-x-auto p-6 gap-6 snap-x md:scroll-px-6 scroll-smooth scrollbar-none"
       @mousedown="onmousedown"
       @mousemove="onmousemove"
@@ -29,16 +30,17 @@
   </div>
 </template>
 
-<script setup>
-const { id } = defineProps({
+<script setup lang="ts">
+const { id, classes } = defineProps({
   id: String,
+  classes: String,
 });
-let cardWrapper = {};
-let widthToScroll = 0;
-let cardBounding = {};
-let currScroll = 0;
-let initPos = 0;
-let clicked = false;
+let cardWrapper: any;
+let widthToScroll: any;
+let cardBounding: any;
+let currScroll: any;
+let initPos: any;
+let clicked: any;
 
 if (process.client) {
   cardWrapper = document.getElementById(id);
@@ -59,14 +61,14 @@ const arrowNext = () => {
 };
 
 /*  */
-const onmousedown = (event) => {
+const onmousedown = (event: any) => {
   cardWrapper.classList.add("grab");
   initPos = event.clientX - cardBounding.left;
   currScroll = cardWrapper.scrollLeft;
   clicked = true;
 };
 
-const onmousemove = (event) => {
+const onmousemove = (event: any) => {
   if (clicked) {
     const xPos = event.clientX - cardBounding.left;
     cardWrapper.scrollLeft = currScroll + -(xPos - initPos);

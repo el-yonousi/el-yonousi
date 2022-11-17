@@ -4,7 +4,9 @@
 
     <what-can-do />
 
-    <works />
+    <experiences/>
+
+    <projects />
 
     <testimonials />
 
