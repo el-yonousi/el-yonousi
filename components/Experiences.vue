@@ -16,7 +16,7 @@
             :alt="experience.company_name"
             draggable="false"
           />
-          <div class="p-4 flex flex-col justify-between gap-1">
+          <div class="p-4 flex flex-col justify-between gap-1 group">
             <div class="flex flex-col gap-1">
               <h3
                 class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none hover:text-gray-400"
@@ -34,27 +34,31 @@
               />
 
               <p class="uppercase select-none">
-                <span
-                  v-text="`${experience.date_start}-${experience.date_end}&nbsp;`"
-                ></span>
+                <span v-text="`${experience.date_start}-${experience.date_end}&nbsp;`" />
                 <span
                   v-if="getDiff(experience.date_start, experience.date_end) !== ''"
                   v-text="`(${getDiff(experience.date_start, experience.date_end)})`"
-                ></span>
+                />
               </p>
             </div>
-            <p class="text-casetrue max-w-sm select-none cursor-pointer text-right">
+            <p class="text-casetrue max-w-sm select-none cursor-pointer">
               <button
                 @click="getExperience(experience)"
                 aria-label="learn more.."
-                v-text="'learn more..'"
-              />
+                class="flex justify-between text-right items-center w-full"
+              >
+                <span v-text="'learn more'" class="uppercase" />
+                <Icon
+                  name="material-symbols:arrow-circle-right-outline-rounded"
+                  class="w-6 h-6 group-hover:animate-ping"
+                />
+              </button>
             </p>
           </div>
         </div>
       </template>
     </Carousel>
-    <modal v-if="openModal" @close-button="() => openModal = false">
+    <modal v-if="openModal" @close-button="() => (openModal = false)">
       <template #component>
         <Experience :experience="setExperience" />
       </template>
@@ -78,6 +82,7 @@ const getExperience = (exper) => {
   open.value = true;
   openModal.value = true;
   setExperience.value = exper;
+  setExperience.value["duration"] = getDiff(exper.date_start, exper.date_end);
 };
 
 const getDiff = (start, end) => {

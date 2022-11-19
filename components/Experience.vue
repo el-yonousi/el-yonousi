@@ -18,8 +18,8 @@
     <p class="uppercase select-none">
       <span v-text="`${experience.date_start}-${experience.date_end}&nbsp;`"></span>
       <span
-        v-if="getDiff(experience.date_start, experience.date_end) !== ''"
-        v-text="`(${getDiff(experience.date_start, experience.date_end)})`"
+        v-if="experience.duration !== ''"
+        v-text="`(${experience.duration})`"
       />
     </p>
   </div>
@@ -37,20 +37,6 @@ if (!experience) {
     fatal: true,
   });
 }
-
-const getDiff = (start, end) => {
-  const startDate = new Date(start);
-  const endDate = end.toLowerCase() == "present" ? new Date() : new Date(end);
-  const totalYear = endDate.getFullYear() - startDate.getFullYear();
-  const totalMonth =
-    (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-    (endDate.getMonth() - startDate.getMonth()) -
-    totalYear * 12;
-  return (
-    (totalYear == 0 ? "" : totalYear + " years, ") +
-    (totalMonth == 0 ? "" : totalMonth + 1 + " months")
-  );
-};
 </script>
 
 <style scoped></style>

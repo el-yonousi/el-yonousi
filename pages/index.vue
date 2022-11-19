@@ -4,13 +4,15 @@
 
     <what-can-do />
 
-    <experiences/>
+    <experiences />
 
     <projects />
 
     <testimonials />
 
     <about />
+
+    <divider />
 
     <contact />
 

@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed border-dark-4 shadow-[0_0_1px_0px_rgba(255,255,255,0.3)] dark:bg-dark-1 dark:bg-opacity-80 left-0 md:top-2/4 bottom-0 md:translate-y-[-50%] md:w-fit w-full h-fit z-50 flex md:flex-col flex-row justify-center items-center gap-3 transition-all duration-700"
+    class="fade fixed right-0 md:top-0 bottom-0 md:w-fit w-full h-fit flex flex-row justify-center items-center gap-3 z-50 border-dark-4 shadow-[0_0_1px_0px_rgba(255,255,255,0.3)] dark:bg-dark-1 dark:bg-opacity-80 transition-all duration-700 ease-in-out"
   >
     <a
       v-for="item in navbars"

@@ -40,3 +40,39 @@ section {
 img {
 	@apply select-none;
 }
+
+a {
+	@apply transition-all duration-300 ease-in-out;
+}
+
+@layer components{
+	.fade-t {
+		@apply after:content-[''] 
+			after:absolute after:bottom-0 after:left-0 
+			after:pointer-events-none 
+			after:bg-gradient-to-t after:from-dark-1 
+			after:w-full after:h-[50%];
+	}
+	.fade-b {
+		@apply after:content-[''] 
+			after:absolute after:top-0 after:left-0 
+			after:pointer-events-none 
+			after:bg-gradient-to-b after:from-dark-1 
+			after:w-full after:h-[50%];
+	}
+	.fade-l {
+		@apply after:content-[''] 
+			after:absolute after:bottom-0 after:right-0 
+			after:pointer-events-none 
+			after:bg-gradient-to-l after:from-dark-1 
+			after:w-[10%] after:h-full
+			after:p-0 after:m-0;
+	}
+	.fade-r {
+		@apply after:content-[''] 
+			after:absolute after:bottom-0 after:left-0
+			after:pointer-events-none 
+			after:bg-gradient-to-r after:from-dark-1 
+			after:w-[10%] after:h-full;
+	}
+}

@@ -1,8 +1,5 @@
 <template>
   <container class="px-4 sm:px-6" id="mycontact">
-    <heading classes="text-center">
-      <span v-text="'my contacts'"></span>
-    </heading>
     <div class="flex flex-row flex-wrap gap-6">
       <div
         class="flex-[38%] w-full flex items-center gap-3 dark:bg-dark-2 rounded p-6"

@@ -19,17 +19,9 @@
           <div class="p-4 flex flex-col justify-between gap-1">
             <div class="flex flex-col gap-1">
               <h3
-                class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none hover:text-gray-400"
-              >
-                <a
-                  draggable="false"
-                  :href="testimonial.linkedin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  :aria-label="testimonial.fullName"
-                  v-text="testimonial.fullName"
-                />
-              </h3>
+                class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none"
+                v-text="testimonial.fullName"
+              />
               <p
                 class="text-gray-300 truncate select-none"
                 :title="testimonial.status"

@@ -4,11 +4,16 @@
     id="contact"
   >
     <heading class="text-center">
-      <span v-text="'contact me'" />
+      <span v-text="'contact me'" class="" />
     </heading>
-    <div class="grid md:grid-cols-2 grid-cols-1">
-      <div class="md:flex justify-center items-center hidden shadow-xl">
-        <Icon name="tabler:zoom-code" class="w-52 h-52" />
+    <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-3">
+      <div
+        class="md:py-0 py-5 md:bg-gradient-to-l md:bg-transparent bg-dark-2 from-dark-1 to-dark-2 flex justify-center items-center rounded-md"
+      >
+        <Icon
+          name="noto-v1:man-technologist-dark-skin-tone"
+          class="grayscale w-52 h-52"
+        />
       </div>
       <div class="md:flex-[50%] flex-[100%] flex flex-col md:items-center">
         <form
@@ -59,10 +64,10 @@
           <div class="w-full">
             <button
               type="submit"
-              class="capitalize dark:bg-casetrue dark:text-dark-1 dark:hover:bg-casetrue-2 rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4 transition-all duration-300 ease-in-out"
+              class="bg-clip-bg text-transparent bg-gradient-to-r from-casetrue to-casetrue-2 capitalize dark:bg-casetrue dark:text-dark-1 dark:hover:bg-casetrue-2 rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4 transition-all duration-300 ease-in-out"
             >
               <span v-text="'send message'" />
-              <span v-if="pending" v-text="'...'" class="animate-pulse"/>
+              <span v-if="pending" v-text="'...'" class="animate-pulse" />
             </button>
           </div>
         </form>

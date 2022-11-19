@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex justify-center items-center bg-[url('/img/banner-1.webp')] bg-blend-multiply bg-dark-2 bg-no-repeat bg-cover w-full h-screen custom-class-nav-scroll"
+    class="fade-t flex justify-center items-center bg-[url('/img/banner-1.webp')] bg-blend-multiply bg-dark-2 bg-no-repeat bg-cover w-full h-screen custom-class-nav-scroll"
     id="home"
   >
     <container class="flex flex-col gap-4 px-4 sm:px-6">
@@ -16,7 +16,11 @@
         <span class="dark:text-casetrue">twist</span> to ancient sites.
       </p>
     </container>
-    <a href="#whatcando" aria-label="scroll down" class="absolute bottom-10 animate-bounce md:block hidden">
+    <a
+      href="#whatcando"
+      aria-label="scroll down"
+      class="absolute bottom-10 animate-bounce md:block hidden"
+    >
       <Icon name="line-md:chevron-triple-down" class="w-10 h-10 dark:text-dark-3" />
     </a>
   </section>

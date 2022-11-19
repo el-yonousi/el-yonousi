@@ -1,16 +1,14 @@
 <template>
-  <div>
+  <div class="relative">
     <!-- <button
-    aria-label="previous"
+      aria-label="previous"
       @click="arrowPrev"
-      class="absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer left-0"
+      class="absolute top-2/4 -translate-y-1/2 w-8 h-full md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer left-0"
     >
-      <slot name="prev">
-        <Icon name="material-symbols:chevron-left-rounded" />
-      </slot>
-    </button> -->
-    <!-- <button
-    aria-label="next"
+      <slot name="prev"> </slot>
+    </button>
+    <button
+      aria-label="next"
       @click="arrowNext"
       class="absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer right-0"
     >
@@ -20,7 +18,7 @@
     </button> -->
     <div
       :class="classes"
-      class="card-wrapper grid grid-flow-col auto-cols-[280px] overflow-x-auto p-6 gap-6 snap-x md:scroll-px-6 scroll-smooth scrollbar-none"
+      class="fade-l card-wrapper grid grid-flow-col auto-cols-[280px] overflow-x-auto p-6 gap-6 snap-x md:scroll-px-6 scroll-smooth scrollbar-none"
       @mousedown="onmousedown"
       @mousemove="onmousemove"
       @mouseup="mouseUpAndLeave"

@@ -6,7 +6,7 @@
           <div>
             <strong class="dark:text-dark-5">Address</strong>
             <address class="dark:text-dark-4 font-semibold">
-              Bujarrah, Jabal Boiblan street, Tetouan, MA 93040
+              Tetouan, Morocco 93040
             </address>
           </div>
           <div>
@@ -76,8 +76,8 @@
         <iframe
           name="google_maps"
           title="google maps"
-          class="flex-[30%] rounded"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d802.6511906358612!2d-5.349084029222774!3d35.59318359876343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b431db3781697%3A0x6d88ee3aff3b4418!2z2KrYt9mI2KfZhg!5e1!3m2!1sar!2sma!4v1661353053722!5m2!1sar!2sma"
+          class="flex-[30%] rounded object-cover"
+          src="https://www.google.com/maps/d/embed?mid=1Rv27nxlEE8sTBgYSMCHD7G4JPFU&ehbc=2E312F"
           width="600"
           height="450"
           style="border: 0"
@@ -87,10 +87,8 @@
         />
       </div>
       <div class="dark:text-dark-4 font-semibold flex gap-3 pt-6">
-        Made With
-        <Icon name="mdi:heart" class="w-5 h-5" />
         <span>
-          By Mohamed EL YONOUSI - ©
+          Mohamed EL YONOUSI - ©
           <strong v-text="new Date().getFullYear()"></strong>
           All Rights Reserved
         </span>
