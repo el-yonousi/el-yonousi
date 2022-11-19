@@ -6,7 +6,7 @@
     <div class="flex flex-col gap-10">
       <div
         v-for="(project, index) in projects"
-        :key="project.date + '-' + index"
+        :key="project.name + '-' + index"
         class="flex md:flex-nowrap flex-wrap md:gap-3 gap-6"
         :class="index % 2 == 0 ? 'md:flex-row' : 'md:flex-row-reverse'"
       >
@@ -59,11 +59,12 @@
                   v-text="`&quot;github&quot;:&nbsp;`"
                 />
                 <a
-                  :href="project.link"
+                  :href="project.clone_url"
                   class="underline underline-offset-4 break-all decoration-1"
                   target="_blank"
                   rel="noopener noreferrer"
                   v-text="`&quot;${project.clone_url}&quot;`"
+                  :aria-label="project.clone_ur"
                 />
               </p>
               <p class="px-3" v-if="project.homepage">
@@ -72,11 +73,12 @@
                   v-text="`&quot;homepage&quot;:&nbsp;`"
                 />
                 <a
-                  :href="project.link"
+                  :href="project.homepage"
                   class="underline underline-offset-4 break-all decoration-1"
                   target="_blank"
                   rel="noopener noreferrer"
                   v-text="`&quot;${project.homepage}&quot;`"
+                  :aria-label="project.homepage"
                 />
               </p>
             </div>

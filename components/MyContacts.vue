@@ -6,20 +6,21 @@
     <div class="flex flex-row flex-wrap gap-6">
       <div
         class="flex-[38%] w-full flex items-center gap-3 dark:bg-dark-2 rounded p-6"
-        v-for="(item, index) in data"
+        v-for="(item, index) in myContacts"
         :key="`${index}-${item.title}`"
       >
-        <Icon :name="item.icon" class="w-8 h-8 text-casetrue"/>
+        <Icon :name="item.icon" class="w-8 h-8 text-casetrue" />
         <div class="flex flex-col gap-3">
           <div
             v-text="item.title"
-            class="tracking-tight font-bold dark:text-casetrue  capitalize text-2xl"
+            class="tracking-tight font-bold dark:text-casetrue capitalize text-2xl"
           ></div>
           <a
             class="text-xl text-casetrue-2 font-semibold break-all"
             v-if="item.link"
             :href="item.link"
             v-text="item.text"
+            :aria-label="item.text"
           />
           <p
             class="text-xl text-casetrue-2 font-semibold break-words"
@@ -33,5 +34,6 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("myContacts", () => $fetch("/api/myContacts"));
+const { myContacts } = await $fetch("/api/myContacts");
+// const { data } = await useAsyncData("myContacts", () => $fetch("/api/myContacts"));
 </script>

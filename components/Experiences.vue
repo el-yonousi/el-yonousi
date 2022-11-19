@@ -32,11 +32,7 @@
                 :title="experience.company_name"
                 v-text="experience.company_name"
               />
-              <!-- <p
-                class="text-gray-400 max-w-sm select-none"
-                :title="experience.description"
-                v-html="experience.description"
-              /> -->
+
               <p class="uppercase select-none">
                 <span
                   v-text="`${experience.date_start}-${experience.date_end}&nbsp;`"
@@ -47,35 +43,40 @@
                 ></span>
               </p>
             </div>
-            <p class="text-casetrue max-w-sm select-none cursor-pointer">
-              <button @click="getExperience(experience)">learn more..</button>
+            <p class="text-casetrue max-w-sm select-none cursor-pointer text-right">
+              <button
+                @click="getExperience(experience)"
+                aria-label="learn more.."
+                v-text="'learn more..'"
+              />
             </p>
           </div>
         </div>
       </template>
     </Carousel>
-    <modal>
+    <modal v-if="openModal" @close-button="() => openModal = false">
       <template #component>
         <Experience :experience="setExperience" />
       </template>
       <template #cancel>
-        <button></button>
+        <button aria-label="cancel"></button>
       </template>
       <template #submit>
-        <button></button>
+        <button aria-label="submit"></button>
       </template>
     </modal>
   </container>
 </template>
 
 <script setup>
-const open = useOpen();
+const openModal = ref(false);
 const setExperience = ref();
 
 const { experiences } = await $fetch("/api/experiences");
 
 const getExperience = (exper) => {
   open.value = true;
+  openModal.value = true;
   setExperience.value = exper;
 };
 

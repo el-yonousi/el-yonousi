@@ -22,6 +22,7 @@
               <li>
                 <span class="dark:text-dark-4 font-bold" v-text="'Email: '" />
                 <a
+                  aria-label="elyonousimohamed@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-casetrue font-semibold hover:text-casetrue-2"
@@ -32,6 +33,7 @@
               <li>
                 <span class="dark:text-dark-4 font-bold" v-text="'Phone: '" />
                 <a
+                  aria-label="+212 60 347 6173"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="tel:+212603476173"
@@ -42,6 +44,7 @@
               <li>
                 <span class="dark:text-dark-4 font-bold" v-text="'Wtsp: '" />
                 <a
+                  aria-label="+212 60 347 6173"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="http://wa.me/+212603476173"
@@ -53,6 +56,7 @@
           </div>
           <div class="flex gap-2">
             <a
+              aria-label="github"
               href="https://github.com/el-yonousi"
               target="_blank"
               rel="noopener noreferrer"
@@ -60,6 +64,7 @@
               <Icon name="mdi:github" class="w-10 h-10 text-dark-4 hover:text-dark-5" />
             </a>
             <a
+              aria-label="linkedin"
               href="https://www.linkedin.com/in/elyonousi/"
               target="_blank"
               rel="noopener noreferrer"
@@ -69,6 +74,8 @@
           </div>
         </div>
         <iframe
+          name="google_maps"
+          title="google maps"
           class="flex-[30%] rounded"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d802.6511906358612!2d-5.349084029222774!3d35.59318359876343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b431db3781697%3A0x6d88ee3aff3b4418!2z2KrYt9mI2KfZhg!5e1!3m2!1sar!2sma!4v1661353053722!5m2!1sar!2sma"
           width="600"

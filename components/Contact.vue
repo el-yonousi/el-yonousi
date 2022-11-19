@@ -57,29 +57,67 @@
             />
           </div>
           <div class="w-full">
-            <input
+            <button
               type="submit"
-              class="capitalize bg-casetrue text-white rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4"
-              value="send message"
-            />
+              class="capitalize dark:bg-casetrue dark:text-dark-1 dark:hover:bg-casetrue-2 rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4 transition-all duration-300 ease-in-out"
+            >
+              <span v-text="'send message'" />
+              <span v-if="pending" v-text="'...'" class="animate-pulse"/>
+            </button>
           </div>
         </form>
       </div>
     </div>
+    <modal v-if="openModal" @close-button="() => (openModal = false)">
+      <template #close>
+        <button aria-label="close"></button>
+      </template>
+      <template #component>
+        <p>
+          <span
+            v-text="
+              'thank you for contacting us, the message was submitted with a success. '
+            "
+          />
+          <Icon name="material-symbols:check-circle" class="text-green-400" />
+        </p>
+      </template>
+      <template #cancel>
+        <button aria-label="cancel"></button>
+      </template>
+      <template #submit>
+        <button
+          aria-label="submit"
+          @click="openModal = false"
+          class="px-2 py-1 dark:bg-casetrue dark:hover:bg-casetrue-2 rounded transition-all duration-300 ease-in-out"
+        >
+          <span v-text="'OK'"></span>
+        </button>
+      </template>
+    </modal>
   </container>
 </template>
 
 <script setup>
 const router = useRouter();
-const form = {
+const openModal = ref(false);
+const pending = ref(false);
+const form = ref({
   fullName: "",
   email: "",
   message: "",
-};
+});
 const client = useSupabaseClient();
-const handleSubmitForm = async (event) => {
-  const formData = new FormData(event.target);
-  const { error, data } = await client.from("forms").insert(form);
+const handleSubmitForm = async () => {
+  pending.value = true;
+  const { data, error } = await client.from("forms").insert([
+    {
+      fullName: form.value.fullName,
+      email: form.value.email,
+      message: form.value.message,
+    },
+  ]);
+
   if (error) {
     throw createError({
       message: error.message,
@@ -87,6 +125,8 @@ const handleSubmitForm = async (event) => {
       fatal: true,
     });
   }
-  router.push("/form.success");
+  openModal.value = true;
+  pending.value = false;
+  form.value = {};
 };
 </script>

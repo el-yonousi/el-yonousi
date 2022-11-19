@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 				{ property: "og:title", content: "Mohamed EL YONOUSI" },
 				{ property: "og:type", content: "portfolio" },
 				{ property: "og:url", content: "/" },
-				{ property: "og:image", content: "/img/logo.png" },
+				{ property: "og:image", content: "/img/logo.webp" },
 			],
 			htmlAttrs: {
 				lang: 'en',

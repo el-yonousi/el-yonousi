@@ -6,7 +6,7 @@
     <Carousel :id="'testimonials-wraper'">
       <template #carousel-data>
         <div
-          v-for="(testimonial, index) in data"
+          v-for="(testimonial, index) in testimonials"
           :key="testimonial.fullName + '-' + index"
           class="drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-[0.3s] ease-in-out"
         >
@@ -18,17 +18,18 @@
           />
           <div class="p-4 flex flex-col justify-between gap-1">
             <div class="flex flex-col gap-1">
-              <a
-                draggable="false"
-                :href="testimonial.url"
-                target="_blank"
-                rel="noopener noreferrer"
+              <h3
+                class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none hover:text-gray-400"
               >
-                <h3
-                  class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none hover:text-gray-400"
+                <a
+                  draggable="false"
+                  :href="testimonial.linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  :aria-label="testimonial.fullName"
                   v-text="testimonial.fullName"
                 />
-              </a>
+              </h3>
               <p
                 class="text-gray-300 truncate select-none"
                 :title="testimonial.status"
@@ -37,7 +38,7 @@
               <p
                 class="text-gray-400 max-h-[100px] line-clamp-3 select-none"
                 :title="testimonial.recommendation"
-                v-text="testimonial.recommendation"
+                v-html="testimonial.recommendation"
               />
             </div>
             <p
@@ -52,5 +53,6 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("testimonials", () => $fetch("/api/testimonials"));
+const { testimonials } = await $fetch("/api/testimonials");
+// const { data } = await useAsyncData("testimonials", () => $fetch("/api/testimonials"));
 </script>

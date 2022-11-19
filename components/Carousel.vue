@@ -1,21 +1,23 @@
 <template>
-  <div class="relative">
-    <button
+  <div>
+    <!-- <button
+    aria-label="previous"
       @click="arrowPrev"
       class="absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer left-0"
     >
       <slot name="prev">
         <Icon name="material-symbols:chevron-left-rounded" />
       </slot>
-    </button>
-    <button
+    </button> -->
+    <!-- <button
+    aria-label="next"
       @click="arrowNext"
       class="absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer right-0"
     >
       <slot name="next">
         <Icon name="material-symbols:chevron-right-rounded" />
       </slot>
-    </button>
+    </button> -->
     <div
       :class="classes"
       class="card-wrapper grid grid-flow-col auto-cols-[280px] overflow-x-auto p-6 gap-6 snap-x md:scroll-px-6 scroll-smooth scrollbar-none"
@@ -30,17 +32,17 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const { id, classes } = defineProps({
   id: String,
   classes: String,
 });
-let cardWrapper: any;
-let widthToScroll: any;
-let cardBounding: any;
-let currScroll: any;
-let initPos: any;
-let clicked: any;
+let cardWrapper;
+let widthToScroll;
+let cardBounding;
+let currScroll;
+let initPos;
+let clicked;
 
 if (process.client) {
   cardWrapper = document.getElementById(id);
@@ -51,24 +53,24 @@ if (process.client) {
   clicked = false;
 }
 
-const arrowPrev = () => {
-  cardWrapper.scrollLeft -= widthToScroll;
-};
+// const arrowPrev = () => {
+//   cardWrapper.scrollLeft -= widthToScroll;
+// };
 
-/* Adding the width of the card to the scrollLeft property of the cardWrapper. */
-const arrowNext = () => {
-  cardWrapper.scrollLeft += widthToScroll;
-};
+// /* Adding the width of the card to the scrollLeft property of the cardWrapper. */
+// const arrowNext = () => {
+//   cardWrapper.scrollLeft += widthToScroll;
+// };
 
 /*  */
-const onmousedown = (event: any) => {
+const onmousedown = (event) => {
   cardWrapper.classList.add("grab");
   initPos = event.clientX - cardBounding.left;
   currScroll = cardWrapper.scrollLeft;
   clicked = true;
 };
 
-const onmousemove = (event: any) => {
+const onmousemove = (event) => {
   if (clicked) {
     const xPos = event.clientX - cardBounding.left;
     cardWrapper.scrollLeft = currScroll + -(xPos - initPos);
