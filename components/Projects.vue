@@ -3,173 +3,52 @@
     <heading classes="text-center">
       <span v-text="'my projects'" />
     </heading>
-    <Carousel :id="'projects-wraper'">
-      <template #carousel-data :classes="'!auto-cols-max'">
+    <Carousel :id="'projects-wraper'" :classes="'md:!auto-cols-max'">
+      <template #carousel-data>
         <div
           v-for="(project, index) in projects"
           :key="project.name + '-' + index"
-          class="drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-[0.3s] ease-in-out"
+          class="overflow-hidden rounded-md snap-start"
         >
-          <img
-            class="fade-t w-full object-cover"
-            :src="`/img/${project.preview}`"
-            :alt="project.name"
-            draggable="false"
-          />
-          <div
-            class="md:flex-[45%] md:w-full flex justify-center items-center shadow-2xl"
-          >
-            <code class="md:text-lg text-base p-4">
-              <span v-text="`&#123;`" />
-              <div class="flex flex-col gap-[1px]">
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;name&quot;:&nbsp;`"
+          <fieldset class="border border-dark-3 rounded-md h-full p-2">
+            <legend class="w-full flex justify-between items-center px-2">
+              <span v-text="project.name" class="uppercase" />
+              <div class="flex justify-between items-center gap-2">
+                <a
+                  v-if="project.homepage"
+                  aria-label="linkedin"
+                  :href="project.homepage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  v-text="'live preview'"
+                  class="border border-dark-4 dark:hover:border-casetrue rounded px-1 py-[0.5px]"
+                />
+                <a
+                  v-if="project.clone_url"
+                  aria-label="linkedin"
+                  :href="project.clone_url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="dark:hover:text-casetrue-2"
+                >
+                  <Icon
+                    name="jam:github"
+                    class="w-8 h-8 text-dark-5 dark:hover:text-casetrue transition-all duration-300 ease-in-out"
                   />
-                  <span v-text="`&quot;${project.name}&quot;,`" />
-                </p>
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;date&quot;:&nbsp;`"
-                  />
-                  <span v-text="`&quot;${project.date}&quot;,`" />
-                </p>
-                <!-- <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;description&quot;:&nbsp;`"
-                  />
-                  <span
-                    class="text-ellipsis"
-                    v-text="`&quot;${project.description}&quot;,`"
-                  />
-                </p> -->
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;tools&quot;:&nbsp;`"
-                  />
-                  <span v-text="'&#91;'" />
-                  <span
-                    v-for="(tool, index_tool) in project.topics"
-                    :key="tool + '-' + index_tool"
-                  >
-                    <span v-text="index_tool == 0 ? '' : ', '" />
-                    <Icon class="w-5 h-5" :name="`vscode-icons:file-type-${tool}`" />
-                  </span>
-                  <span v-text="`&#93;,`" />
-                </p>
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;github&quot;:&nbsp;`"
-                  />
-                  <a
-                    :href="project.clone_url"
-                    class="underline underline-offset-4 break-all decoration-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    v-text="`&quot;${project.clone_url}&quot;`"
-                    :aria-label="project.clone_ur"
-                  />
-                </p>
-                <p class="px-3" v-if="project.homepage">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;homepage&quot;:&nbsp;`"
-                  />
-                  <a
-                    :href="project.homepage"
-                    class="underline underline-offset-4 break-all decoration-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    v-text="`&quot;${project.homepage}&quot;`"
-                    :aria-label="project.homepage"
-                  />
-                </p>
+                </a>
               </div>
-              <span v-text="`&#125;`" />
-            </code>
-          </div>
-          <!-- <div
-            class="md:flex-[45%] md:w-full flex justify-center items-center shadow-2xl"
-          >
-            <code class="md:text-lg text-base p-4">
-              <span v-text="`&#123;`" />
-              <div class="flex flex-col gap-[1px]">
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;name&quot;:&nbsp;`"
-                  />
-                  <span v-text="`&quot;${project.name}&quot;,`" />
-                </p>
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;date&quot;:&nbsp;`"
-                  />
-                  <span v-text="`&quot;${project.date}&quot;,`" />
-                </p>
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;description&quot;:&nbsp;`"
-                  />
-                  <span
-                    class="text-ellipsis"
-                    v-text="`&quot;${project.description}&quot;,`"
-                  />
-                </p>
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;tools&quot;:&nbsp;`"
-                  />
-                  <span v-text="'&#91;'" />
-                  <span
-                    v-for="(tool, index_tool) in project.topics"
-                    :key="tool + '-' + index_tool"
-                  >
-                    <span v-text="index_tool == 0 ? '' : ', '" />
-                    <Icon class="w-5 h-5" :name="`vscode-icons:file-type-${tool}`" />
-                  </span>
-                  <span v-text="`&#93;,`" />
-                </p>
-                <p class="px-3">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;github&quot;:&nbsp;`"
-                  />
-                  <a
-                    :href="project.clone_url"
-                    class="underline underline-offset-4 break-all decoration-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    v-text="`&quot;${project.clone_url}&quot;`"
-                    :aria-label="project.clone_ur"
-                  />
-                </p>
-                <p class="px-3" v-if="project.homepage">
-                  <span
-                    class="text-casetrue font-bold"
-                    v-text="`&quot;homepage&quot;:&nbsp;`"
-                  />
-                  <a
-                    :href="project.homepage"
-                    class="underline underline-offset-4 break-all decoration-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    v-text="`&quot;${project.homepage}&quot;`"
-                    :aria-label="project.homepage"
-                  />
-                </p>
-              </div>
-              <span v-text="`&#125;`" />
-            </code>
-          </div> -->
+            </legend>
+            <nuxt-img
+              class="w-full h-60 object-cover rounded-md"
+              :src="project.preview"
+              :alt="project.name"
+              sizes="100vw md:50vw lg:400px"
+              draggable="false"
+              loading="lazy"
+              fit="cover"
+              format="webp"
+            />
+          </fieldset>
         </div>
       </template>
     </Carousel>

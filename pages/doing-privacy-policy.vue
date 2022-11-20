@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <container class="flex flex-col gap-8 text-dark-4 p-8 text-2xl mt-28">
     <h1>Privacy Policy for CASETRUE</h1>
     <p>
       Doing does not knowingly collect any Personal Identifiable Information from children
@@ -149,28 +149,28 @@
       rights. Every user is entitled to the following:
     </p>
     <p>
-      The right to access – You have the right to request copies of your personal data. We
+      The right to access - You have the right to request copies of your personal data. We
       may charge you a small fee for this service.
     </p>
     <p>
-      The right to rectification – You have the right to request that we correct any
+      The right to rectification - You have the right to request that we correct any
       information you believe is inaccurate. You also have the right to request that we
       complete the information you believe is incomplete.
     </p>
     <p>
-      The right to erasure – You have the right to request that we erase your personal
+      The right to erasure - You have the right to request that we erase your personal
       data, under certain conditions.
     </p>
     <p>
-      The right to restrict processing – You have the right to request that we restrict
+      The right to restrict processing - You have the right to request that we restrict
       the processing of your personal data, under certain conditions.
     </p>
     <p>
-      The right to object to processing – You have the right to object to our processing
+      The right to object to processing - You have the right to object to our processing
       of your personal data, under certain conditions.
     </p>
     <p>
-      The right to data portability – You have the right to request that we transfer the
+      The right to data portability - You have the right to request that we transfer the
       data that we have collected to another organization, or directly to you, under
       certain conditions.
     </p>
@@ -193,21 +193,23 @@
       information on our website, we strongly encourage you to contact us immediately and
       we will do our best efforts to promptly remove such information from our records.
     </p>
-  </section>
+  </container>
 </template>
 
 <style scoped>
-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  color: whitesmoke;
-  padding: 2rem;
-  font-size: 1.5rem;
+h1 {
+  @apply text-6xl underline decoration-slice text-casetrue;
 }
 
-h1 {
-  font-size: 3.5rem;
-  text-decoration: underline solid #ffaa00;
+h2 {
+  @apply text-5xl underline decoration-slice text-casetrue;
+}
+
+h3 {
+  @apply text-4xl underline decoration-slice text-casetrue;
+}
+
+h4 {
+  @apply text-3xl underline decoration-slice text-casetrue;
 }
 </style>

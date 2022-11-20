@@ -10,15 +10,19 @@
           :key="testimonial.fullName + '-' + index"
           class="drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-[0.3s] ease-in-out"
         >
-          <img
+          <nuxt-img
             class="w-full h-52 object-cover"
             :src="testimonial.profile"
             :alt="testimonial.fullName"
+            sizes="100vw md:50vw lg:400px"
             draggable="false"
+            loading="lazy"
+            fit="cover"
+            format="webp"
           />
           <div class="p-4 flex flex-col justify-between gap-1">
             <div class="flex flex-col gap-1">
-              <h3
+              <p
                 class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none"
                 v-text="testimonial.fullName"
               />

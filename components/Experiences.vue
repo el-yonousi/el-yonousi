@@ -8,19 +8,24 @@
         <div
           v-for="experience in experiences"
           :key="experience.id"
-          class="flex md:flex-row flex-col drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-[0.3s] ease-in-out"
+          class="group flex md:flex-row flex-col drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-700 ease-in-out"
         >
-          <img
+          <nuxt-img
             class="md:w-52 h-52 object-cover"
             :src="experience.profile"
             :alt="experience.company_name"
+            sizes="100vw md:50vw lg:400px"
             draggable="false"
+            loading="lazy"
+            fit="cover"
+            format="webp"
           />
-          <div class="p-4 flex flex-col justify-between gap-1 group">
+          <div class="p-4 flex flex-col justify-between gap-1">
             <div class="flex flex-col gap-1">
-              <h3
-                class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none hover:text-gray-400"
+              <p
+                class="title font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none hover:text-gray-400"
                 v-text="experience.title"
+                :title="experience.title"
               />
               <p
                 class="text-gray-300 truncate select-none"
@@ -41,18 +46,13 @@
                 />
               </p>
             </div>
-            <p class="text-casetrue max-w-sm select-none cursor-pointer">
+            <p class="text-casetrue max-w-sm select-none cursor-pointer text-right">
               <button
                 @click="getExperience(experience)"
                 aria-label="learn more.."
-                class="flex justify-between text-right items-center w-full"
-              >
-                <span v-text="'learn more'" class="uppercase" />
-                <Icon
-                  name="material-symbols:arrow-circle-right-outline-rounded"
-                  class="w-6 h-6 group-hover:animate-ping"
-                />
-              </button>
+                v-text="'learn more'"
+                class="text-end uppercase"
+              />
             </p>
           </div>
         </div>
