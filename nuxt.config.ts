@@ -1,6 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
 	app: {
+		pageTransition: { name: 'page', mode: 'out-in' },
+		layoutTransition: { name: 'layout', mode: 'out-in' },
 		head: {
 			title: 'Mohamed EL YONOUSI',
 			meta: [
@@ -60,5 +62,5 @@ export default defineNuxtConfig({
 	// 	shim: false
 	// },
 
-	plugins: []
+	plugins: ['/plugins/mixins/aos.js']
 })

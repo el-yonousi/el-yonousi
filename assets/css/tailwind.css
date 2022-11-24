@@ -29,6 +29,15 @@ body {
 	@apply opacity-0 blur-[1rem];
 }
 
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.4s;
+}
+.layout-enter-from,
+.layout-leave-to {
+	@apply opacity-0 blur-[1rem];
+}
+
 .active svg {
 	@apply dark:text-casetrue;
 }

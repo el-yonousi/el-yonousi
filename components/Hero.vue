@@ -1,10 +1,14 @@
 <template>
   <section
-    class="fade-t flex justify-center items-center bg-blend-multiply bg-dark-2 bg-no-repeat bg-cover w-full h-screen custom-class-nav-scroll"
+    class="fade-t relative flex justify-center items-center bg-blend-multiply bg-dark-2 bg-no-repeat bg-cover w-full h-screen custom-class-nav-scroll"
     id="home"
-    :style="{ backgroundImage: `url('${banner}')` }"
+    :style="{ backgroundImage: `url('${img_banner}')` }"
   >
-    <container class="flex flex-col gap-4 px-4 sm:px-6">
+    <video :poster="img_banner"  autoplay loop muted class="absolute w-auto min-w-full min-h-full max-w-none">
+      <source :src="vid_banner" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <container class="z-10 flex flex-col gap-4 px-4 sm:px-6">
       <Heading classes="flex flex-col gap-4 !text-4xl md:!text-5xl lg:!text-7xl mb-0">
         <p class="dark:text-dark-4">Hello,</p>
         <p class="dark:text-dark-4">
@@ -28,5 +32,6 @@
 </template>
 
 <script setup>
-const { banner } = await $fetch("/api/banner");
+const { vid_banner } = await $fetch("/api/banner/vid_banner");
+const { img_banner } = await $fetch("/api/banner/img_banner");
 </script>

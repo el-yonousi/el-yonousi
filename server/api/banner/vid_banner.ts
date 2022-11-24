@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
 	const client = serverSupabaseClient(event)
 	const { data } = await client.storage
 		.from('images')
-		.getPublicUrl('site/banner.webp')
+		.getPublicUrl('site/vid-banner.mp4')
 
-	return { banner: data.publicUrl };
+	return { vid_banner: data.publicUrl };
 });

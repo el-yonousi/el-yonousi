@@ -1,5 +1,10 @@
 <template>
-  <container class="px-4 sm:px-6 w-full custom-class-nav-scroll" id="experiences">
+  <container
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    class="px-4 sm:px-6 w-full custom-class-nav-scroll"
+    id="experiences"
+  >
     <heading classes="text-center">
       <span v-text="'my experiences'" />
     </heading>
@@ -21,7 +26,7 @@
             format="webp"
           />
           <div class="p-4 flex flex-col justify-between gap-1">
-            <div class="flex flex-col gap-1">
+            <div class="group flex flex-col gap-1">
               <p
                 class="title font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none hover:text-gray-400"
                 v-text="experience.title"
@@ -46,44 +51,35 @@
                 />
               </p>
             </div>
-            <p class="text-casetrue max-w-sm select-none cursor-pointer text-right">
-              <button
-                @click="getExperience(experience)"
+            <p class="text-casetrue max-w-sm select-none cursor-pointer flex justify-end">
+              <NuxtLink
+                :to="`/experiences/${experience.id}`"
                 aria-label="learn more.."
-                v-text="'learn more'"
-                class="text-end uppercase"
-              />
+                class="flex items-center text-end uppercase"
+              >
+                <span v-text="'learn more'"></span>
+                <Icon
+                  name="line-md:chevron-right"
+                  class="group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out"
+                />
+              </NuxtLink>
             </p>
           </div>
         </div>
       </template>
     </Carousel>
-    <modal v-if="openModal" @close-button="() => (openModal = false)">
-      <template #component>
-        <Experience :experience="setExperience" />
-      </template>
-      <template #cancel>
-        <button aria-label="cancel"></button>
-      </template>
-      <template #submit>
-        <button aria-label="submit"></button>
-      </template>
-    </modal>
   </container>
 </template>
 
 <script setup>
-const openModal = ref(false);
-const setExperience = ref();
+// import AOS from 'aos'
+// import 'aos/dist/aos.css'
 
-const { experiences } = await $fetch("/api/experiences");
+// if (process.client) {
+//   AOS.init({ })
+// }
 
-const getExperience = (exper) => {
-  open.value = true;
-  openModal.value = true;
-  setExperience.value = exper;
-  setExperience.value["duration"] = getDiff(exper.date_start, exper.date_end);
-};
+const { experiences } = await $fetch("/api/experiences/experiences");
 
 const getDiff = (start, end) => {
   const startDate = new Date(start);
