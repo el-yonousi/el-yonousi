@@ -3,7 +3,8 @@
     <heading classes="text-center">
       <span v-text="'my projects'" />
     </heading>
-    <Carousel :id="'projects-wraper'" :classes="'md:!auto-cols-max'">
+    <div v-if="projects.length == 0">loading..</div>
+    <Carousel v-else :id="'projects-wraper'" :classes="'md:!auto-cols-max'">
       <template #carousel-data>
         <div
           v-for="(project, index) in projects"
@@ -14,28 +15,27 @@
             <legend class="w-full flex justify-between items-center px-2">
               <span v-text="project.name" class="uppercase" />
               <div class="flex justify-between items-center gap-2">
-                <a
+                <NuxtLink
                   v-if="project.homepage"
                   aria-label="linkedin"
-                  :href="project.homepage"
+                  :to="project.homepage"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  v-text="'live preview'"
                   class="border border-dark-4 dark:hover:border-casetrue rounded px-1 py-[0.5px]"
-                />
-                <a
+                >
+                  live preview
+                </NuxtLink>
+                <NuxtLink
                   v-if="project.clone_url"
                   aria-label="linkedin"
-                  :href="project.clone_url"
+                  :to="project.clone_url"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="dark:hover:text-casetrue-2"
                 >
                   <Icon
                     name="jam:github"
                     class="w-8 h-8 text-dark-5 dark:hover:text-casetrue transition-all duration-300 ease-in-out"
                   />
-                </a>
+                </NuxtLink>
               </div>
             </legend>
             <nuxt-img
@@ -56,5 +56,5 @@
 </template>
 
 <script setup>
-const { projects } = await $fetch("/api/projects");
+const { data: projects, pending } = await useFetch("/api/projects");
 </script>

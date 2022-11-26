@@ -8,7 +8,8 @@
     <heading classes="text-center">
       <span v-text="'my experiences'" />
     </heading>
-    <Carousel :id="'experiences-wraper'" :classes="'!auto-cols-max'">
+    <div v-if="experiences.length == 0">loading..</div>
+    <Carousel v-else :id="'experiences-wraper'" :classes="'!auto-cols-max'">
       <template #carousel-data>
         <div
           v-for="experience in experiences"
@@ -72,14 +73,7 @@
 </template>
 
 <script setup>
-// import AOS from 'aos'
-// import 'aos/dist/aos.css'
-
-// if (process.client) {
-//   AOS.init({ })
-// }
-
-const { experiences } = await $fetch("/api/experiences/experiences");
+const { data: experiences, pending } = await useFetch("/api/experiences/experiences");
 
 const getDiff = (start, end) => {
   const startDate = new Date(start);

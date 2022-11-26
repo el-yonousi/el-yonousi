@@ -43,12 +43,14 @@ let initPos;
 let clicked;
 
 if (process.client) {
-  cardWrapper = document.getElementById(id);
-  widthToScroll = cardWrapper.children[0].offsetWidth;
-  cardBounding = cardWrapper.getBoundingClientRect();
-  currScroll = 0;
-  initPos = 0;
-  clicked = false;
+  if (id != "") {
+    cardWrapper = document.getElementById(id);
+    widthToScroll = cardWrapper?.children[0]?.offsetWidth;
+    cardBounding = cardWrapper?.getBoundingClientRect();
+    currScroll = 0;
+    initPos = 0;
+    clicked = false;
+  }
 }
 
 // const arrowPrev = () => {
@@ -76,7 +78,7 @@ const onmousemove = (event) => {
 };
 
 const mouseUpAndLeave = () => {
-  cardWrapper.classList.remove("grab");
+  cardWrapper?.classList?.remove("grab");
   clicked = false;
 };
 </script>

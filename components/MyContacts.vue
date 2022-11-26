@@ -12,13 +12,15 @@
             v-text="item.title"
             class="tracking-tight font-bold dark:text-casetrue capitalize text-2xl"
           ></div>
-          <a
+          <NuxtLink
             class="text-xl text-casetrue-2 font-semibold break-all"
             v-if="item.link"
-            :href="item.link"
-            v-text="item.text"
+            :to="item.link"
             :aria-label="item.text"
-          />
+            no-rel
+          >
+            {{ item.text }}
+          </NuxtLink>
           <p
             class="text-xl text-casetrue-2 font-semibold break-words"
             v-else

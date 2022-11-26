@@ -1,10 +1,13 @@
 <template>
   <container class="px-4 sm:px-6 w-full">
     <heading />
-    <NuxtLink to="/#experiences" class="uppercase flex items-center">
+    <NuxtLink to="/#experiences" class="uppercase flex items-center" no-rel>
       <Icon name="line-md:chevron-left" class="w-8 h-8" />
       <span v-text="'back to experiences'" />
     </NuxtLink>
+    <button @click="back">
+      {{ experience.company_name }}
+    </button>
     <heading />
     <div class="flex gap-4">
       <div
@@ -23,13 +26,12 @@
             v-text="experience.employment_type"
           />
           <p class="text-casetrue font-semibold hover:text-casetrue-2 select-none">
-            <a
+            <NuxtLink
               :aria-label="experience.company_name"
               target="_blank"
-              rel="noopener noreferrer"
-              :href="experience.company_url"
-              v-text="experience.company_name"
-            />
+              :to="experience.company_url"
+            >
+            </NuxtLink>
           </p>
           <p class="text-gray-400 select-none" v-html="experience.description" />
           <p class="uppercase select-none">
@@ -69,6 +71,10 @@ const getDiff = (start, end) => {
     (totalYear == 0 ? "" : totalYear + " yrs, ") +
     (totalMonth == 0 ? "" : totalMonth + 1 + " mos")
   );
+};
+
+const back = async () => {
+  await navigateTo("/");
 };
 </script>
 

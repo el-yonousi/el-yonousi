@@ -6,5 +6,5 @@ export default defineEventHandler(async (event) => {
 		.from('images')
 		.getPublicUrl('site/vid-banner.mp4')
 
-	return { vid_banner: data.publicUrl };
+	 { vid_banner: data.publicUrl };
 });

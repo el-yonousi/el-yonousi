@@ -26,7 +26,8 @@
       elyonousi. This policy is not applicable to any information collected offline or via
       channels other than this website. Our Privacy Policy was created with the help of
       the
-      <a href="https://www.privacypolicygenerator.info/">Free Privacy Policy Generator</a
+      <NuxtLink to="https://www.privacypolicygenerator.info/" target="_blank">
+        Free Privacy Policy Generator </NuxtLink
       >.
     </p>
 

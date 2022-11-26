@@ -21,56 +21,54 @@
             <ul>
               <li>
                 <span class="dark:text-dark-4 font-bold" v-text="'Email: '" />
-                <a
+                <NuxtLink
                   aria-label="elyonousimohamed@gmail.com"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="text-casetrue font-semibold hover:text-casetrue-2"
-                  href="mailto:elyonousimohamed@gmail.com"
-                  v-text="'elyonousimohamed@gmail.com'"
-                />
+                  to="mailto:elyonousimohamed@gmail.com"
+                >
+                  elyonousimohamed@gmail.com
+                </NuxtLink>
               </li>
               <li>
                 <span class="dark:text-dark-4 font-bold" v-text="'Phone: '" />
-                <a
+                <NuxtLink
                   aria-label="+212 60 347 6173"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  href="tel:+212603476173"
+                  to="tel:+212603476173"
                   class="text-casetrue font-semibold hover:text-casetrue-2"
-                  v-text="'+212 60 347 6173'"
-                />
+                >
+                  +212 60 347 6173
+                </NuxtLink>
               </li>
               <li>
                 <span class="dark:text-dark-4 font-bold" v-text="'Wtsp: '" />
-                <a
+                <NuxtLink
                   aria-label="+212 60 347 6173"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  href="http://wa.me/+212603476173"
+                  to="http://wa.me/+212603476173"
                   class="text-casetrue font-semibold hover:text-casetrue-2"
-                  v-text="'+212 60 347 6173'"
-                />
+                >
+                  +212 60 347 6173
+                </NuxtLink>
               </li>
             </ul>
           </div>
           <div class="flex gap-2">
-            <a
+            <NuxtLink
               aria-label="github"
-              href="https://github.com/el-yonousi"
+              to="https://github.com/el-yonousi"
               target="_blank"
-              rel="noopener noreferrer"
             >
               <Icon name="mdi:github" class="w-10 h-10 text-dark-4 hover:text-dark-5" />
-            </a>
-            <a
+            </NuxtLink>
+            <NuxtLink
               aria-label="linkedin"
-              href="https://www.linkedin.com/in/elyonousi/"
+              to="https://www.linkedin.com/in/elyonousi/"
               target="_blank"
-              rel="noopener noreferrer"
             >
               <Icon name="mdi:linkedin" class="w-10 h-10 text-dark-4 hover:text-dark-5" />
-            </a>
+            </NuxtLink>
           </div>
         </div>
         <iframe

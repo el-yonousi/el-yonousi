@@ -3,7 +3,8 @@
     <heading classes="text-center">
       <span v-text="'What My Friends and teachers Say'" />
     </heading>
-    <Carousel :id="'testimonials-wraper'">
+    <div v-if="testimonials.length == 0">loading..</div>
+    <Carousel v-else :id="'testimonials-wraper'">
       <template #carousel-data>
         <div
           v-for="(testimonial, index) in testimonials"
@@ -49,6 +50,5 @@
 </template>
 
 <script setup>
-const { testimonials } = await $fetch("/api/testimonials");
-// const { data } = await useAsyncData("testimonials", () => $fetch("/api/testimonials"));
+const { data: testimonials, pending } = await useFetch("/api/testimonials");
 </script>

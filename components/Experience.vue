@@ -6,21 +6,18 @@
     />
     <p class="text-gray-300 truncate select-none" v-text="experience.employment_type" />
     <p class="text-casetrue font-semibold hover:text-casetrue-2 select-none">
-      <a
+      <NuxtLink
         :aria-label="experience.company_name"
         target="_blank"
-        rel="noopener noreferrer"
-        :href="experience.company_url"
-        v-text="experience.company_name"
-      />
+        :to="experience.company_url"
+      >
+        {{ experience.company_name }}
+      </NuxtLink>
     </p>
     <p class="text-gray-400 select-none" v-html="experience.description" />
     <p class="uppercase select-none">
       <span v-text="`${experience.date_start}-${experience.date_end}&nbsp;`"></span>
-      <span
-        v-if="experience.duration !== ''"
-        v-text="`(${experience.duration})`"
-      />
+      <span v-if="experience.duration !== ''" v-text="`(${experience.duration})`" />
     </p>
   </div>
 </template>
