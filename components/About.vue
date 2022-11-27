@@ -29,15 +29,12 @@
       <div
         class="flex-[50%] md:py-0 py-5 md:bg-gradient-to-r md:bg-transparent bg-dark-2 from-dark-1 to-dark-2 flex justify-center items-center rounded-md"
       >
-        <nuxt-img
-          class="grayscale w-52 h-52 rounded-md"
+        <img
+          class="grayscale w-52 h-52 object-cover rounded-md"
           :src="logo"
           alt="logo"
-          sizes="100vw md:50vw lg:400px"
           draggable="false"
           loading="lazy"
-          fit="cover"
-          format="webp"
         />
       </div>
     </div>

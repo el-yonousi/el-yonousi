@@ -20,7 +20,7 @@
                     aria-label="linkedin"
                     :to="project.homepage"
                     target="_blank"
-                    class="border border-dark-4 dark:hover:border-casetrue rounded px-1 py-[0.5px]"
+                    class="border border-dark-4 dark:hover:border-casetrue-1 rounded px-1 py-[0.5px]"
                   >
                     live preview
                   </NuxtLink>
@@ -33,20 +33,17 @@
                   >
                     <Icon
                       name="jam:github"
-                      class="w-8 h-8 text-dark-5 dark:hover:text-casetrue transition-all duration-300 ease-in-out"
+                      class="w-8 h-8 text-dark-5 dark:hover:text-casetrue-1 transition-all duration-300 ease-in-out"
                     />
                   </NuxtLink>
                 </div>
               </legend>
-              <nuxt-img
+              <img
                 class="w-full h-60 object-cover rounded-md"
                 :src="project.preview"
                 :alt="project.name"
-                sizes="100vw md:50vw lg:400px"
                 draggable="false"
                 loading="lazy"
-                fit="cover"
-                format="webp"
               />
             </fieldset>
           </div>

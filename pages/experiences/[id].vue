@@ -22,7 +22,7 @@
             class="text-gray-300 truncate select-none"
             v-text="experience.employment_type"
           />
-          <p class="text-casetrue font-semibold hover:text-casetrue-2 select-none">
+          <p class="text-casetrue-1 font-semibold hover:text-casetrue-2 select-none">
             <NuxtLink
               :aria-label="experience.company_name"
               target="_blank"

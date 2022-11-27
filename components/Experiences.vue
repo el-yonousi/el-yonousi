@@ -20,15 +20,12 @@
             :key="experience.id"
             class="group flex md:flex-row flex-col drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-700 ease-in-out"
           >
-            <nuxt-img
+            <img
               class="md:w-52 h-52 object-cover"
               :src="experience.profile"
               :alt="experience.company_name"
-              sizes="100vw md:50vw lg:400px"
               draggable="false"
               loading="lazy"
-              fit="cover"
-              format="webp"
             />
             <div class="p-4 flex flex-col justify-between gap-1">
               <div class="group flex flex-col gap-1">

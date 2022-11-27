@@ -199,18 +199,18 @@
 
 <style scoped>
 h1 {
-  @apply text-6xl underline decoration-slice text-casetrue;
+  @apply text-6xl underline decoration-slice text-casetrue-1;
 }
 
 h2 {
-  @apply text-5xl underline decoration-slice text-casetrue;
+  @apply text-5xl underline decoration-slice text-casetrue-1;
 }
 
 h3 {
-  @apply text-4xl underline decoration-slice text-casetrue;
+  @apply text-4xl underline decoration-slice text-casetrue-1;
 }
 
 h4 {
-  @apply text-3xl underline decoration-slice text-casetrue;
+  @apply text-3xl underline decoration-slice text-casetrue-1;
 }
 </style>

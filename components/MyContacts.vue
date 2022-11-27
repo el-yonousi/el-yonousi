@@ -10,7 +10,7 @@
         <div class="flex flex-col gap-3">
           <div
             v-text="item.title"
-            class="tracking-tight font-bold dark:text-casetrue capitalize text-2xl"
+            class="tracking-tight font-bold dark:text-casetrue-1 capitalize text-2xl"
           ></div>
           <NuxtLink
             class="text-xl text-casetrue-2 font-semibold break-all"

@@ -13,7 +13,7 @@
       no-rel
     >
       <Icon
-        class="dark:text-dark-4 dark:hover:text-casetrue w-7 h-7 transition-all duration-700"
+        class="dark:text-dark-4 dark:hover:text-casetrue-1 w-7 h-7 transition-all duration-700"
         :name="item.icon"
       />
     </NuxtLink>

@@ -11,15 +11,12 @@
             :key="testimonial.fullName + '-' + index"
             class="drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-[0.3s] ease-in-out"
           >
-            <nuxt-img
+            <img
               class="w-full h-52 object-cover"
               :src="testimonial.profile"
               :alt="testimonial.fullName"
-              sizes="100vw md:50vw lg:400px"
               draggable="false"
               loading="lazy"
-              fit="cover"
-              format="webp"
             />
             <div class="p-4 flex flex-col justify-between gap-1">
               <div class="flex flex-col gap-1">
@@ -39,7 +36,7 @@
                 />
               </div>
               <p
-                class="p-1 uppercase text-casetrue select-none"
+                class="p-1 uppercase text-casetrue-1 select-none"
                 v-text="testimonial.relationship"
               />
             </div>

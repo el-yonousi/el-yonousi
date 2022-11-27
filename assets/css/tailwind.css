@@ -15,7 +15,7 @@ body {
 	@apply 
 	dark:bg-dark-1 
 	dark:text-dark-4 
-	dark:selection:bg-casetrue 
+	dark:selection:bg-casetrue-1 
 	dark:selection:text-dark-1;
 }
 
@@ -39,7 +39,7 @@ body {
 }
 
 .active svg {
-	@apply dark:text-casetrue;
+	@apply dark:text-casetrue-1;
 }
 
 section {
@@ -59,7 +59,7 @@ a {
 }
 
 .swiper-pagination-bullet-active {
-	@apply bg-casetrue !important;
+	@apply bg-casetrue-1 !important;
 }
 
 @layer components{

@@ -19,7 +19,7 @@
           <div>
             <Icon
               :name="what.icon"
-              class="text-dark-5 w-16 h-16 dark:bg-casetrue rounded-full p-3"
+              class="text-dark-5 w-16 h-16 dark:bg-casetrue-1 rounded-full p-3"
             />
           </div>
           <div class="flex flex-col gap-2">

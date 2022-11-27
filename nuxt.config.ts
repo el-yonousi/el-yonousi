@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/color-mode',
 		'nuxt-icon',
 		'@nuxtjs/supabase',
-		'@nuxt/image-edge'
+		// '@nuxt/image-edge'
 	],
 
 	tailwindcss: {

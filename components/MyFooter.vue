@@ -24,7 +24,7 @@
                 <NuxtLink
                   aria-label="elyonousimohamed@gmail.com"
                   target="_blank"
-                  class="text-casetrue font-semibold hover:text-casetrue-2"
+                  class="text-casetrue-1 font-semibold hover:text-casetrue-2"
                   to="mailto:elyonousimohamed@gmail.com"
                 >
                   elyonousimohamed@gmail.com
@@ -36,7 +36,7 @@
                   aria-label="+212 60 347 6173"
                   target="_blank"
                   to="tel:+212603476173"
-                  class="text-casetrue font-semibold hover:text-casetrue-2"
+                  class="text-casetrue-1 font-semibold hover:text-casetrue-2"
                 >
                   +212 60 347 6173
                 </NuxtLink>
@@ -47,7 +47,7 @@
                   aria-label="+212 60 347 6173"
                   target="_blank"
                   to="http://wa.me/+212603476173"
-                  class="text-casetrue font-semibold hover:text-casetrue-2"
+                  class="text-casetrue-1 font-semibold hover:text-casetrue-2"
                 >
                   +212 60 347 6173
                 </NuxtLink>

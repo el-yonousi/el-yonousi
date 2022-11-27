@@ -64,7 +64,7 @@
           <div class="w-full">
             <button
               type="submit"
-              class="bg-clip-bg text-transparent bg-gradient-to-r from-casetrue to-casetrue-2 capitalize dark:bg-casetrue dark:text-dark-1 dark:hover:bg-casetrue-2 rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4 transition-all duration-300 ease-in-out"
+              class="bg-clip-bg text-transparent bg-gradient-to-r from-casetrue-1 to-casetrue-2 capitalize dark:bg-casetrue-1 dark:text-dark-1 dark:hover:bg-casetrue-2 rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4 transition-all duration-300 ease-in-out"
             >
               <span v-text="'send message'" />
               <span v-if="pending" v-text="'...'" class="animate-pulse" />
@@ -94,7 +94,7 @@
         <button
           aria-label="submit"
           @click="openModal = false"
-          class="px-2 py-1 dark:bg-casetrue dark:hover:bg-casetrue-2 rounded transition-all duration-300 ease-in-out"
+          class="px-2 py-1 dark:bg-casetrue-1 dark:hover:bg-casetrue-2 rounded transition-all duration-300 ease-in-out"
         >
           <span v-text="'OK'"></span>
         </button>

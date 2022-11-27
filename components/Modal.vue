@@ -14,7 +14,7 @@
           >
             <Icon
               name="line-md:menu-to-close-transition"
-              class="w-6 h-6 dark:text-casetrue dark:hover:text-red-500 transition-all duration-300 ease-in-out"
+              class="w-6 h-6 dark:text-casetrue-1 dark:hover:text-red-500 transition-all duration-300 ease-in-out"
             />
           </button>
         </div>
@@ -25,7 +25,7 @@
           <button
             aria-label="open"
             @click="$emit('closeButton')"
-            class="px-2 py-1 border border-casetrue dark:hover:border-casetrue-2 dark:hover:text-dark-5 rounded outline-none transition-all duration-300 ease-in-out"
+            class="px-2 py-1 border border-casetrue-1 dark:hover:border-casetrue-2 dark:hover:text-dark-5 rounded outline-none transition-all duration-300 ease-in-out"
             v-text="'cancel'"
           />
         </slot>
@@ -33,7 +33,7 @@
           <button
             aria-label="open"
             @click="$emit('closeButton')"
-            class="px-2 py-1 dark:bg-casetrue dark:text-dark-1 dark:hover:bg-casetrue-2 rounded outline-none transition-all duration-300 ease-in-out"
+            class="px-2 py-1 dark:bg-casetrue-1 dark:text-dark-1 dark:hover:bg-casetrue-2 rounded outline-none transition-all duration-300 ease-in-out"
             v-text="'submit'"
           />
         </slot>
