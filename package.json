@@ -15,12 +15,9 @@
         "@tailwindcss/line-clamp": "^0.4.2",
         "nuxt": "^3.0.0",
         "nuxt-icon": "^0.1.7",
-        "sass": "^1.56.1",
-        "sass-loader": "^13.2.0",
         "tailwind-scrollbar": "^2.0.1"
     },
     "dependencies": {
-        "aos": "^2.3.4",
-        "swiper": "^8.4.5"
+        "aos": "^2.3.4"
     }
 }

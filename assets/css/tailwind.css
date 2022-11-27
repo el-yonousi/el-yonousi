@@ -54,13 +54,21 @@ a {
 	@apply transition-all duration-300 ease-in-out;
 }
 
+.swiper-pagination-bullet {
+	@apply bg-dark-4 !important;
+}
+
+.swiper-pagination-bullet-active {
+	@apply bg-casetrue !important;
+}
+
 @layer components{
 	.fade-t {
 		@apply after:content-[''] 
 			after:absolute after:bottom-0 after:left-0 
 			after:pointer-events-none 
 			after:bg-gradient-to-t after:from-dark-1 
-			after:w-full after:h-[50%];
+			after:w-full after:h-full;
 	}
 	.fade-b {
 		@apply after:content-[''] 

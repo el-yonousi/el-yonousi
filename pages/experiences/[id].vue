@@ -5,9 +5,6 @@
       <Icon name="line-md:chevron-left" class="w-8 h-8" />
       <span v-text="'back to experiences'" />
     </NuxtLink>
-    <button @click="back">
-      {{ experience.company_name }}
-    </button>
     <heading />
     <div class="flex gap-4">
       <div
@@ -71,10 +68,6 @@ const getDiff = (start, end) => {
     (totalYear == 0 ? "" : totalYear + " yrs, ") +
     (totalMonth == 0 ? "" : totalMonth + 1 + " mos")
   );
-};
-
-const back = async () => {
-  await navigateTo("/");
 };
 </script>
 

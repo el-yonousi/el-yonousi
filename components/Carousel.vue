@@ -1,21 +1,23 @@
 <template>
-  <div class="relative">
-    <!-- <button
+  <div class="relative group" draggable="false">
+    <button
       aria-label="previous"
       @click="arrowPrev"
-      class="absolute top-2/4 -translate-y-1/2 w-8 h-full md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer left-0"
+      class="group-hover:opacity-80 opacity-0 absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer left-0 transition-all duration-300 ease-in-out"
     >
-      <slot name="prev"> </slot>
+      <slot name="prev"> 
+        <Icon name="material-symbols:chevron-left-rounded" />
+      </slot>
     </button>
     <button
       aria-label="next"
       @click="arrowNext"
-      class="absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer right-0"
+      class="group-hover:opacity-80 opacity-0 absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center dark:bg-dark-2 dark:bg-opacity-50 dark:hover:bg-opacity-80 z-10 cursor-pointer right-0 transition-all duration-300 ease-in-out"
     >
       <slot name="next">
         <Icon name="material-symbols:chevron-right-rounded" />
       </slot>
-    </button> -->
+    </button>
     <div
       :class="classes"
       class="fade-l card-wrapper grid grid-flow-col auto-cols-[280px] overflow-x-auto p-6 gap-6 snap-x md:scroll-px-6 scroll-smooth scrollbar-none"
@@ -42,25 +44,29 @@ let currScroll;
 let initPos;
 let clicked;
 
-if (process.client) {
-  if (id != "") {
-    cardWrapper = document.getElementById(id);
-    widthToScroll = cardWrapper?.children[0]?.offsetWidth;
-    cardBounding = cardWrapper?.getBoundingClientRect();
+onMounted(() => {
+  load();
+});
+
+const load = async () => {
+  if (cardWrapper == null) {
+    cardWrapper = await document.querySelector(`#${id}`);
+    widthToScroll = await cardWrapper?.children[0]?.offsetWidth;
+    cardBounding = await cardWrapper?.getBoundingClientRect();
     currScroll = 0;
     initPos = 0;
     clicked = false;
   }
-}
+};
 
-// const arrowPrev = () => {
-//   cardWrapper.scrollLeft -= widthToScroll;
-// };
+const arrowPrev = () => {
+  cardWrapper.scrollLeft -= widthToScroll;
+};
 
-// /* Adding the width of the card to the scrollLeft property of the cardWrapper. */
-// const arrowNext = () => {
-//   cardWrapper.scrollLeft += widthToScroll;
-// };
+/* Adding the width of the card to the scrollLeft property of the cardWrapper. */
+const arrowNext = () => {
+  cardWrapper.scrollLeft += widthToScroll;
+};
 
 /*  */
 const onmousedown = (event) => {
