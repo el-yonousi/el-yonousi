@@ -1,6 +1,6 @@
 <template>
   <section
-    class="fade-t flex justify-center items-center bg-blend-multiply bg-dark-2 bg-no-repeat bg-cover w-full h-screen custom-class-nav-scroll"
+    class="md:fade-t flex justify-center items-center bg-blend-multiply bg-dark-2 bg-no-repeat bg-cover w-full h-screen custom-class-nav-scroll"
     id="home"
     :style="{ backgroundImage: `url('${img_banner}')` }"
   >
