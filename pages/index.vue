@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col md:gap-32 gap-28 mx-auto m-0 p-0">
+  <div class="flex flex-col md:gap-28 gap-20 mx-auto m-0 p-0">
     <hero />
 
     <what-can-do />
@@ -11,8 +11,6 @@
     <testimonials />
 
     <about />
-
-    <divider />
 
     <contact />
 

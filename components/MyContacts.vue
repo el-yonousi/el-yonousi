@@ -11,7 +11,7 @@
         v-for="(item, index) in myContacts"
         :key="`${index}-${item.title}`"
       >
-        <Icon :name="item.icon" class="w-8 h-8 text-casetrue" />
+        <Icon :name="item.icon" class="w-8 h-8 text-casetrue-1" />
         <div class="flex flex-col gap-3">
           <div
             v-text="item.title"

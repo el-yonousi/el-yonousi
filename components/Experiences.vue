@@ -61,7 +61,7 @@
                 <NuxtLink
                   :to="`/experiences/${experience.id}`"
                   aria-label="learn more.."
-                  class="flex items-center text-end uppercase"
+                  class="flex items-center text-end uppercase hover:text-casetrue-1"
                   draggable="false"
                 >
                   <span v-text="'learn more'"></span>

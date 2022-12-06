@@ -25,10 +25,20 @@
             />
             <div class="p-4 flex flex-col justify-between gap-1">
               <div class="flex flex-col gap-1">
-                <p
-                  class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none"
-                  v-text="testimonial.fullName"
-                />
+                <div class="flex justify-between items-center gap-2">
+                  <p
+                    class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none"
+                    v-text="testimonial.fullName"
+                  />
+                  <NuxtLink
+                    :to="`testimonials/${testimonial.id}`"
+                    no-rel
+                    draggable="false"
+                    class="p-0 m-0 leading-none"
+                  >
+                    <Icon name="ic:baseline-remove-red-eye" class="h-5 w-5 group-hover:text-casetrue-1"/>
+                  </NuxtLink>
+                </div>
                 <p
                   class="text-gray-300 truncate select-none"
                   :title="testimonial.status"
@@ -41,7 +51,7 @@
                 />
               </div>
               <p
-                class="p-1 uppercase text-casetrue-1 select-none"
+                class="py-1 uppercase text-casetrue-1 select-none self-start"
                 v-text="testimonial.relationship"
               />
             </div>
@@ -53,5 +63,5 @@
 </template>
 
 <script setup>
-const { data: testimonials } = await useFetch("/api/testimonials");
+const { data: testimonials } = await useFetch("/api/testimonials/testimonials");
 </script>
