@@ -1,5 +1,10 @@
 <template>
-  <section class="dark:bg-dark-2 md:py-12 py-16" id="footer">
+  <section
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    class="dark:bg-dark-2 md:py-12 py-16"
+    id="footer"
+  >
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-wrap justify-center items-center gap-6">
         <div class="flex-[30%] flex flex-col md:text-xl text-lg gap-6">

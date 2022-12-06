@@ -1,10 +1,19 @@
 <template>
-  <container class="px-4 sm:px-6 w-full" id="projects">
+  <container
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    class="px-4 sm:px-6 w-full"
+    id="projects"
+  >
     <heading classes="text-center">
       <span v-text="'my projects'" />
     </heading>
     <ClientOnly>
-      <Carousel v-if="projects != []" :id="'projects-wraper'" :classes="'md:!auto-cols-max'">
+      <Carousel
+        v-if="projects != []"
+        :id="'projects-wraper'"
+        :classes="'md:!auto-cols-max'"
+      >
         <template #carousel-data>
           <div
             v-for="(project, index) in projects"

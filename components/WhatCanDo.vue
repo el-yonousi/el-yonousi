@@ -1,5 +1,10 @@
 <template>
-  <container class="px-4 sm:px-6" id="whatcando">
+  <container
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    class="px-4 sm:px-6"
+    id="whatcando"
+  >
     <div class="flex md:flex-nowrap flex-wrap gap-6">
       <div class="flex-[50%]">
         <heading>

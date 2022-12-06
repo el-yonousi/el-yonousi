@@ -1,5 +1,10 @@
 <template>
-  <container class="px-4 sm:px-6 custom-class-nav-scroll" id="about">
+  <container
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    class="px-4 sm:px-6 custom-class-nav-scroll"
+    id="about"
+  >
     <heading class="text-center">
       <span v-text="'About Me'" />
     </heading>

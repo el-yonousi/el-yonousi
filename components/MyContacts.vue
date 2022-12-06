@@ -1,5 +1,10 @@
 <template>
-  <container class="px-4 sm:px-6" id="mycontact">
+  <container
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    class="px-4 sm:px-6"
+    id="mycontact"
+  >
     <div class="flex flex-row flex-wrap gap-6">
       <div
         class="flex-[38%] w-full flex items-center gap-3 dark:bg-dark-2 rounded p-6"
