@@ -1,8 +1,9 @@
 <template>
   <section
     data-aos="fade-up"
+    data-aos-duration="3000"
     data-aos-anchor-placement="top-bottom"
-    class="md:fade-b dark:bg-dark-2 md:py-12 py-16"
+    class="border-t shadow-casetrue border-casetrue-1 md:py-12 py-16"
     id="footer"
   >
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

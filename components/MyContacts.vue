@@ -5,9 +5,12 @@
     class="px-4 sm:px-6"
     id="mycontact"
   >
-    <div class="flex flex-row flex-wrap gap-6">
+    <div class="flex flex-row flex-wrap gap-8">
       <div
-        class="flex-[38%] w-full flex items-center gap-3 dark:bg-dark-2 rounded p-6"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-anchor-placement="top-bottom"
+        class="border border-casetrue-1 shadow-casetrue flex-[38%] w-full flex items-center gap-3 dark:bg-dark-1 rounded p-6"
         v-for="(item, index) in myContacts"
         :key="`${index}-${item.title}`"
       >

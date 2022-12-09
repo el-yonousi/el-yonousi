@@ -1,6 +1,6 @@
 <template>
   <section
-    class="md:fade-t flex justify-center items-center bg-blend-multiply bg-dark-2 bg-no-repeat bg-cover w-full h-screen custom-class-nav-scroll"
+    class="md:fade-t flex justify-center items-center bg-blend-multiply bg-dark-1 bg-no-repeat bg-cover w-full h-screen custom-class-nav-scroll"
     id="home"
     :style="{ backgroundImage: `url('${img_banner}')` }"
   >
@@ -8,13 +8,13 @@
       <Heading classes="flex flex-col gap-4 !text-4xl md:!text-5xl lg:!text-7xl mb-0">
         <p class="dark:text-dark-4">Hello,</p>
         <p class="dark:text-dark-4">
-          I am <span class="dark:text-casetrue">Mohamed</span>
+          I am <span class="dark:text-casetrue-1">Mohamed</span>
         </p>
         <p class="dark:text-dark-4 capitalize">full stack developer</p>
       </Heading>
       <p class="text-base sm:text-lg dark:text-dark-4 md:text-xl lg:mx-0">
         Create full-stack web development from scratch, repair old websites, and add a new
-        <span class="dark:text-casetrue">twist</span> to ancient sites.
+        <span class="dark:text-casetrue-1">twist</span> to ancient sites.
       </p>
     </container>
     <NuxtLink

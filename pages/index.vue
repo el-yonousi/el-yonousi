@@ -10,6 +10,8 @@
 
     <testimonials />
 
+    <divider/>
+
     <about />
 
     <contact />

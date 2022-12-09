@@ -2,6 +2,7 @@
   <container
     data-aos="fade-up"
     data-aos-anchor-placement="top-bottom"
+    data-aos-anchor="#experiences"
     class="px-4 sm:px-6 w-full custom-class-nav-scroll"
     id="experiences"
   >
@@ -56,11 +57,10 @@
                 </p>
               </div>
               <p
-                class="text-casetrue max-w-sm select-none cursor-pointer flex justify-end"
+                class="text-casetrue-1 max-w-sm select-none cursor-pointer flex justify-end"
               >
-                <NuxtLink
-                  :to="`/experiences/${experience.id}`"
-                  aria-label="learn more.."
+                <span
+                  @click="openExperience(experience)"
                   class="flex items-center text-end uppercase hover:text-casetrue-1"
                   draggable="false"
                 >
@@ -69,7 +69,7 @@
                     name="line-md:chevron-right"
                     class="group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out"
                   />
-                </NuxtLink>
+                </span>
               </p>
             </div>
           </div>
@@ -77,9 +77,23 @@
       </Carousel>
     </ClientOnly>
   </container>
+  <Experience
+    v-if="openModal"
+    @close-button="() => (openModal = false)"
+    :experience="experience"
+  />
 </template>
 
 <script setup>
+
+const openModal = ref(false);
+const experience = ref();
+const openExperience = (exprce) => {
+  openModal.value = true;
+  experience.value = exprce;
+  experience.value["date_diff"] = getDiff(exprce.date_start, exprce.date_end);
+};
+
 const { data: experiences } = await useFetch("/api/experiences/experiences");
 
 const getDiff = (start, end) => {

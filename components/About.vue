@@ -15,7 +15,7 @@
             Hello
             <Icon
               name="material-symbols:waving-hand-outline-rounded"
-              class="text-casetrue"
+              class="text-casetrue-1"
             />
             I am <strong>Mohamed El YONOUSI</strong>, born on March 05, 1996, in Morocco,
             I have a passion for research and self-learning, providing service to society

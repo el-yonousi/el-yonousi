@@ -13,6 +13,9 @@ module.exports = {
                 'dark-4': "#BFBFAE",
                 'dark-5': "#F2F2E4",
             },
+            boxShadow: {
+                'casetrue': '0px 4px 24px rgba(255,170,0,15%)'
+            }
             // fontSize: {
             //     h1: "clamp(1rem, 10vw, 3rem)",
             // },

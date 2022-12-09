@@ -30,14 +30,16 @@
                     class="font-bold mb-[3px] inline-block text-xl text-gray-200 capitalize select-none"
                     v-text="testimonial.fullName"
                   />
-                  <NuxtLink
-                    :to="`testimonials/${testimonial.id}`"
-                    no-rel
+                  <span
+                    @click="openTestimonial(testimonial)"
                     draggable="false"
                     class="p-0 m-0 leading-none"
                   >
-                    <Icon name="ic:baseline-remove-red-eye" class="h-5 w-5 group-hover:text-casetrue-1"/>
-                  </NuxtLink>
+                    <Icon
+                      name="ic:baseline-remove-red-eye"
+                      class="h-5 w-5 group-hover:text-casetrue-1"
+                    />
+                  </span>
                 </div>
                 <p
                   class="text-gray-300 truncate select-none"
@@ -45,7 +47,7 @@
                   v-text="testimonial.status"
                 />
                 <p
-                  class="text-gray-400 max-h-[100px] line-clamp-3 select-none"
+                  class="text-gray-400 max-h-[100px] line-clamp-2 select-none"
                   :title="testimonial.recommendation"
                   v-html="testimonial.recommendation"
                 />
@@ -60,8 +62,25 @@
       </Carousel>
     </ClientOnly>
   </container>
+  <Testimonial
+    v-if="openModal"
+    @close-button="() => (openModal = false)"
+    :testimonial="testimonial"
+  />
 </template>
 
 <script setup>
+const openModal = ref(false);
+const testimonial = ref();
+if (process.client) {
+  if (openModal.value == true) {
+    document.documentElement.style.overflow = 'hidden'
+  }
+}
+const openTestimonial = (tstmnl) => {
+  openModal.value = true;
+  testimonial.value = tstmnl;
+};
+
 const { data: testimonials } = await useFetch("/api/testimonials/testimonials");
 </script>

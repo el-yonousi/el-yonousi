@@ -75,34 +75,34 @@
         </form>
       </div>
     </div>
-    <modal v-if="openModal" @close-button="() => (openModal = false)">
-      <template #close>
-        <button aria-label="close"></button>
-      </template>
-      <template #component>
-        <p>
-          <span
-            v-text="
-              'thank you for contacting us, the message was submitted with a success. '
-            "
-          />
-          <Icon name="material-symbols:check-circle" class="text-green-400" />
-        </p>
-      </template>
-      <template #cancel>
-        <button aria-label="cancel"></button>
-      </template>
-      <template #submit>
-        <button
-          aria-label="submit"
-          @click="openModal = false"
-          class="px-2 py-1 dark:bg-casetrue-1 dark:hover:bg-casetrue-2 text-dark-2 font-bold rounded transition-all duration-300 ease-in-out"
-        >
-          <span v-text="'OK'"></span>
-        </button>
-      </template>
-    </modal>
   </container>
+  <modal v-if="openModal" @close-button="() => (openModal = false)">
+    <template #close>
+      <button aria-label="close"></button>
+    </template>
+    <template #component>
+      <p>
+        <span
+          v-text="
+            'thank you for contacting us, the message was submitted with a success. '
+          "
+        />
+        <Icon name="material-symbols:check-circle" class="text-green-400" />
+      </p>
+    </template>
+    <template #cancel>
+      <button aria-label="cancel"></button>
+    </template>
+    <template #submit>
+      <button
+        aria-label="submit"
+        @click="openModal = false"
+        class="px-2 py-1 dark:bg-casetrue-1 dark:hover:bg-casetrue-2 text-dark-2 font-bold rounded transition-all duration-300 ease-in-out"
+      >
+        <span v-text="'OK'"></span>
+      </button>
+    </template>
+  </modal>
 </template>
 
 <script setup>
