@@ -6,8 +6,15 @@
     id="projects"
   >
     <heading classes="text-center">
-      <span v-text="'my projects'" />
+      <span v-text="'projects'" />
     </heading>
+    <div class="md:px-4 flex flex-col gap-4 md:w-1/2 w-full mb-4">
+      <h3 class="text-2xl dark:text-dark-4 font-bold capitalize">featured projects</h3>
+      <p class="text-xl">
+        Created as a part of the learning process, the goal was to build modern,
+        responsive, and useful web applications.
+      </p>
+    </div>
     <ClientOnly>
       <Carousel
         v-if="projects != []"
@@ -20,7 +27,9 @@
             :key="project.name + '-' + index"
             class="overflow-hidden rounded-md snap-start"
           >
-            <fieldset class="border border-dark-3 rounded-md h-full p-2">
+            <fieldset
+              class="border hover:border-casetrue-2 border-casetrue-1 rounded-md h-full p-2 transition-all duration-300 ease-in-out"
+            >
               <legend class="w-full flex justify-between items-center px-2">
                 <span v-text="project.name" class="uppercase" />
                 <div class="flex justify-between items-center gap-2">

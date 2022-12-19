@@ -3,7 +3,7 @@
     class="fixed top-0 bottom-0 left-0 right-0 z-50 dark:bg-dark-1 dark:bg-opacity-95 flex justify-center items-center"
   >
     <div
-      class="flex flex-col gap-4 dark:bg-dark-2 shadow-lg md:w-[50%] w-screen md:h-fit overflow-x-auto p-4 rounded"
+      class="flex flex-col gap-4 dark:bg-dark-1 border border-casetrue-1 shadow-casetrue md:w-[50%] w-screen md:h-fit overflow-x-auto p-4 rounded"
     >
       <slot name="close">
         <div class="w-full text-right">

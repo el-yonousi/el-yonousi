@@ -3,16 +3,16 @@
     <button
       aria-label="previous"
       @click="arrowPrev"
-      class="group-hover:opacity-80 opacity-0 absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center  z-10 cursor-pointer left-0 transition-all duration-300 ease-in-out"
+      class="group-hover:opacity-80 opacity-0 absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center z-10 cursor-pointer left-0 transition-all duration-300 ease-in-out"
     >
-      <slot name="prev"> 
+      <slot name="prev">
         <Icon class="w-12 h-12" name="material-symbols:chevron-left-rounded" />
       </slot>
     </button>
     <button
       aria-label="next"
       @click="arrowNext"
-      class="group-hover:opacity-80 opacity-0 absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center  z-10 cursor-pointer right-0 transition-all duration-300 ease-in-out"
+      class="group-hover:opacity-80 opacity-0 absolute top-2/4 -translate-y-1/2 w-8 h-14 md:flex hidden items-center justify-center z-10 cursor-pointer right-0 transition-all duration-300 ease-in-out"
     >
       <slot name="next">
         <Icon class="w-12 h-12" name="material-symbols:chevron-right-rounded" />

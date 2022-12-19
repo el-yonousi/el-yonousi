@@ -7,8 +7,15 @@
     id="experiences"
   >
     <heading classes="text-center">
-      <span v-text="'my experiences'" />
+      <span v-text="'experiences'" />
     </heading>
+    <div class="md:px-4 flex flex-col gap-4 md:w-1/2 w-full mb-4">
+      <h3 class="text-2xl dark:text-dark-4 font-bold capitalize">professional side</h3>
+      <p class="text-xl">
+        Professional experiences that allowed me to build my career by developing my
+        personal and technical skills professionally.
+      </p>
+    </div>
     <ClientOnly>
       <Carousel
         v-if="experiences != []"
@@ -19,7 +26,7 @@
           <div
             v-for="experience in experiences"
             :key="experience.id"
-            class="group flex md:flex-row flex-col drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-700 ease-in-out"
+            class="group flex md:flex-row flex-col hover:shadow-casetrue border border-casetrue-1 overflow-hidden rounded-md snap-start transition-all duration-700 ease-in-out"
           >
             <img
               class="md:w-52 h-52 object-cover"
@@ -85,7 +92,6 @@
 </template>
 
 <script setup>
-
 const openModal = ref(false);
 const experience = ref();
 const openExperience = (exprce) => {

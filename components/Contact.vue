@@ -10,7 +10,7 @@
     </heading>
     <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-3">
       <div
-        class="md:py-0 py-5 md:bg-gradient-to-l md:bg-transparent bg-dark-2 from-dark-1 to-dark-2 flex justify-center items-center rounded-md"
+        class="md:py-0 py-5 md:bg-gradient-to-l md:bg-transparent bg-dark-2 from-dark-1 rounded-md to-dark-2 flex justify-center items-center"
       >
         <Icon
           name="noto-v1:man-technologist-dark-skin-tone"
@@ -29,9 +29,9 @@
           <div class="w-full">
             <label for="fullName"></label>
             <input
-              class="dark:bg-dark-2 dark:text-dark-4 text-dark-2 w-full rounded dark:border-0 md:text-lg text-base md:p-6 p-4"
+              class="dark:bg-dark-2 dark:text-dark-4 text-dark-2 focus:outline-casetrue-1 outline-none w-full rounded md:text-lg text-base md:p-6 p-4"
               autocomplete="off"
-              placeholder="Enter your full name here"
+              placeholder="full name"
               type="text"
               name="fullName"
               id="fullName"
@@ -42,9 +42,9 @@
           <div class="w-full">
             <label for="email"></label>
             <input
-              class="dark:bg-dark-2 dark:text-dark-4 text-dark-2 w-full rounded dark:border-0 md:text-lg text-base md:p-6 p-4"
+              class="dark:bg-dark-2 dark:text-dark-4 focus:outline-casetrue-1 outline-none  w-full rounded  md:text-lg text-base md:p-6 p-4"
               autocomplete="off"
-              placeholder="Enter your email here"
+              placeholder="email"
               type="email"
               name="email"
               id="email"
@@ -55,9 +55,9 @@
           <div class="w-full">
             <label for="message"></label>
             <textarea
-              class="dark:bg-dark-2 dark:text-dark-4 text-dark-2 w-full rounded dark:border-0 min-h-[100px] max-h-[300px] md:text-lg text-base md:p-6 p-4"
+              class="dark:bg-dark-2 dark:text-dark-4 focus:outline-casetrue-1 outline-none text-dark-2 w-full rounded  min-h-[100px] max-h-[300px] md:text-lg text-base md:p-6 p-4"
               autocomplete="off"
-              placeholder="Enter your message here"
+              placeholder="message.."
               name="message"
               id="message"
               v-model="form.message"
@@ -81,10 +81,10 @@
       <button aria-label="close"></button>
     </template>
     <template #component>
-      <p>
+      <p class="text-xl">
         <span
           v-text="
-            'thank you for contacting us, the message was submitted with a success. '
+            'Thank you for contacting us, the message was submitted with a success. '
           "
         />
         <Icon name="material-symbols:check-circle" class="text-green-400" />

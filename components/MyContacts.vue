@@ -16,12 +16,12 @@
       >
         <Icon :name="item.icon" class="w-8 h-8 text-casetrue-1" />
         <div class="flex flex-col gap-3">
-          <div
+          <h3
             v-text="item.title"
-            class="tracking-tight font-bold dark:text-casetrue-1 capitalize text-2xl"
-          ></div>
+            class="tracking-tight font-bold dark:text-dark-4 capitalize text-2xl"
+          />
           <NuxtLink
-            class="text-xl text-casetrue-2 font-semibold break-all"
+            class="text-xl text-dark-3 font-semibold break-all"
             v-if="item.link"
             :to="item.link"
             :aria-label="item.text"
@@ -30,7 +30,7 @@
             {{ item.text }}
           </NuxtLink>
           <p
-            class="text-xl text-casetrue-2 font-semibold break-words"
+            class="text-xl text-dark-3 font-semibold break-words"
             v-else
             v-text="item.text"
           />

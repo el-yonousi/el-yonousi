@@ -10,23 +10,23 @@
       <div class="flex flex-wrap justify-center items-center gap-6">
         <div class="flex-[30%] flex flex-col md:text-xl text-lg gap-6">
           <div>
-            <strong class="dark:text-dark-5">Address</strong>
-            <address class="dark:text-dark-4 font-semibold">
+            <strong class="dark:text-dark-4">Address</strong>
+            <address class="dark:text-dark-3 font-semibold">
               Tetouan, Morocco 93040
             </address>
           </div>
           <div>
-            <strong class="dark:text-dark-5"> Feedback</strong>
-            <p class="dark:text-dark-4 font-semibold">
+            <strong class="dark:text-dark-4"> Feedback</strong>
+            <p class="dark:text-dark-3 font-semibold">
               Please send us your ideas, bug reports, suggestions! Any feedback would be
               appreciated.
             </p>
           </div>
           <div>
-            <strong class="dark:text-dark-5" v-text="'Contacts'" />
+            <strong class="dark:text-dark-4" v-text="'Contacts'" />
             <ul>
               <li>
-                <span class="dark:text-dark-4 font-bold" v-text="'Email: '" />
+                <span class="dark:text-dark-3 font-bold" v-text="'Email: '" />
                 <NuxtLink
                   aria-label="elyonousimohamed@gmail.com"
                   target="_blank"
@@ -37,7 +37,7 @@
                 </NuxtLink>
               </li>
               <li>
-                <span class="dark:text-dark-4 font-bold" v-text="'Phone: '" />
+                <span class="dark:text-dark-3 font-bold" v-text="'Phone: '" />
                 <NuxtLink
                   aria-label="+212 60 347 6173"
                   target="_blank"
@@ -48,7 +48,7 @@
                 </NuxtLink>
               </li>
               <li>
-                <span class="dark:text-dark-4 font-bold" v-text="'Wtsp: '" />
+                <span class="dark:text-dark-3 font-bold" v-text="'Wtsp: '" />
                 <NuxtLink
                   aria-label="+212 60 347 6173"
                   target="_blank"
@@ -66,14 +66,14 @@
               to="https://github.com/el-yonousi"
               target="_blank"
             >
-              <Icon name="mdi:github" class="w-10 h-10 text-dark-4 hover:text-dark-5" />
+              <Icon name="mdi:github" class="w-10 h-10 text-dark-3 hover:text-dark-4" />
             </NuxtLink>
             <NuxtLink
               aria-label="linkedin"
               to="https://www.linkedin.com/in/elyonousi/"
               target="_blank"
             >
-              <Icon name="mdi:linkedin" class="w-10 h-10 text-dark-4 hover:text-dark-5" />
+              <Icon name="mdi:linkedin" class="w-10 h-10 text-dark-3 hover:text-dark-4" />
             </NuxtLink>
           </div>
         </div>
@@ -90,7 +90,7 @@
           referrerpolicy="no-referrer-when-downgrade"
         />
       </div>
-      <div class="dark:text-dark-4 font-semibold flex gap-3 pt-6">
+      <div class="dark:text-dark-3 font-semibold flex gap-3 pt-6">
         <span>
           Mohamed EL YONOUSI - ©
           <strong v-text="new Date().getFullYear()"></strong>

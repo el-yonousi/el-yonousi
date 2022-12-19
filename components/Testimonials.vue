@@ -5,16 +5,22 @@
     class="px-4 sm:px-6 w-full custom-class-nav-scroll"
     id="testimonials"
   >
-    <heading classes="text-center">
-      <span v-text="'What My Friends and teachers Say'" />
+    <heading classes="text-center capitalize">
+      <span v-text="'what my relationships say'" />
     </heading>
+    <div class="md:px-4 flex flex-col gap-4 md:w-1/2 w-full mb-4">
+      <h3 class="text-2xl dark:text-dark-4 font-bold capitalize">recommendations</h3>
+      <p class="text-xl">
+        a couple of recommendations from teachers, mentors, colleagues, and supervisors.
+      </p>
+    </div>
     <ClientOnly>
       <Carousel v-if="testimonials != []" :id="'testimonials-wraper'">
         <template #carousel-data>
           <div
             v-for="(testimonial, index) in testimonials"
             :key="testimonial.fullName + '-' + index"
-            class="drop-shadow-sm shadow-sm shadow-dark-3 overflow-hidden rounded-md snap-start lg:grayscale-[100%] hover:grayscale-0 transition-all duration-[0.3s] ease-in-out"
+            class="hover:shadow-casetrue border border-casetrue-1 overflow-hidden rounded-md snap-start transition-all duration-[0.3s] ease-in-out"
           >
             <img
               class="w-full h-52 object-cover"
@@ -74,7 +80,7 @@ const openModal = ref(false);
 const testimonial = ref();
 if (process.client) {
   if (openModal.value == true) {
-    document.documentElement.style.overflow = 'hidden'
+    document.documentElement.style.overflow = "hidden";
   }
 }
 const openTestimonial = (tstmnl) => {
