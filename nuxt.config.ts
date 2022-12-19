@@ -65,5 +65,5 @@ export default defineNuxtConfig({
 	// 	shim: false
 	// },
 
-	plugins: ['/plugins/mixins/aos.js']
+	plugins: ['/plugins/mixins/aos.ts']
 })
