@@ -14,7 +14,15 @@
         v-for="(item, index) in myContacts"
         :key="`${index}-${item.title}`"
       >
-        <Icon :name="item.icon" class="w-8 h-8 text-casetrue-1" />
+        <Icon
+          v-if="item.title == 'working hours'"
+          :name="
+            `${item.icon}` +
+            new Date().toLocaleTimeString('MA', { hour: 'numeric' }).split(' ')[0]
+          "
+          class="w-8 h-8 text-casetrue-1"
+        />
+        <Icon v-else :name="item.icon" class="w-8 h-8 text-casetrue-1" />
         <div class="flex flex-col gap-3">
           <h3
             v-text="item.title"

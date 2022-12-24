@@ -1,9 +1,7 @@
 <template>
   <div
-    data-aos="fade-left"
-    data-aos-duration="300"
     @click.self="$emit('closeButton')"
-    class="fixed w-full h-full top-0 right-0 z-50 dark:bg-dark-1 dark:bg-opacity-80 flex justify-end items-center"
+    class="fixed w-full h-full top-0 right-0 z-50 flex justify-end items-center"
   >
     <div
       class="border-casetrue-1 shadow-casetrue flex flex-col overflow-x-auto md:w-11/12 lg:w-4/5 w-full h-full gap-4 dark:bg-dark-1 rounded"
@@ -25,7 +23,7 @@
       </div>
       <div class="flex md:flex-row flex-col gap-4 p-4">
         <div
-          class="flex-[30%] md:h-fit  p-4 flex justify-center items-center rounded border border-dark-2 shadow-md"
+          class="flex-[30%] md:h-fit p-4 flex justify-center items-center rounded border border-dark-2 shadow-md"
         >
           <img
             class="rounded w-full h-full"

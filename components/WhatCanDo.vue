@@ -27,7 +27,7 @@
               class="text-dark-5 w-16 h-16 dark:bg-casetrue-1 rounded-full p-3"
             />
           </div>
-          <div data-aos="fade-left" data-aos-duration="3000" class="flex flex-col gap-2">
+          <div data-aos="fade-up" data-aos-duration="3000" class="flex flex-col gap-2">
             <p class="text-xl font-bold dark:text-casetrue-1">{{ what.title }}</p>
             <p class="text-lg text-dark-4">{{ what.description }}</p>
           </div>

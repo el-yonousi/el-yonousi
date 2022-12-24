@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
 // },
 // {
 //     title: "working hours",
-//     icon: "tabler:clock-hour-9",
+//     icon: "tabler:clock-hour-2",
 //     link: "",
 //     text: "9:00 - 18:00",
 // }

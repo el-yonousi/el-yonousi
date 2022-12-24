@@ -2,7 +2,7 @@ import { serverSupabaseClient } from '#supabase/server'
 
 export default defineEventHandler(async (event) => {
     const client = serverSupabaseClient(event)
-    const { data } = await client.from("projects").select("name, date, description, topics, clone_url, homepage, preview, order").order('order', { ascending: true });
+    const { data } = await client.from("projects").select("name, date, description, topics, clone_url, homepage, preview, order").eq('display', true).order('order', { ascending: true });
     return data;
 });
 

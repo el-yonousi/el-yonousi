@@ -68,11 +68,19 @@
       </Carousel>
     </ClientOnly>
   </container>
-  <Testimonial
-    v-if="openModal"
-    @close-button="() => (openModal = false)"
-    :testimonial="testimonial"
-  />
+  <transition
+    enter-active-class="transition ease-out duration-700 translate-x-2/3"
+    enter-to-class="transform opacity-100 translate-x-0"
+    leave-active-class="transition ease-in duration-300"
+    leave-from-class="transform opacity-100"
+    leave-to-class="transform opacity-0 translate-x-2/3"
+  >
+    <Testimonial
+      v-if="openModal"
+      @close-button="() => (openModal = false)"
+      :testimonial="testimonial"
+    />
+  </transition>
 </template>
 
 <script setup>
@@ -89,4 +97,12 @@ const openTestimonial = (tstmnl) => {
 };
 
 const { data: testimonials } = await useFetch("/api/testimonials/testimonials");
+
+watchEffect(() => {
+  useHead({
+    htmlAttrs: {
+      class: openModal.value ? "overflow-hidden" : "",
+    },
+  });
+});
 </script>

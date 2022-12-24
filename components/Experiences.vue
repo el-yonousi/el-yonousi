@@ -74,7 +74,7 @@
                   <span v-text="'learn more'"></span>
                   <Icon
                     name="line-md:chevron-right"
-                    class="group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out"
+                    class="group-hover:opacity-100 md:opacity-0 transition-all duration-300 ease-in-out"
                   />
                 </span>
               </p>
@@ -84,11 +84,19 @@
       </Carousel>
     </ClientOnly>
   </container>
-  <Experience
-    v-if="openModal"
-    @close-button="() => (openModal = false)"
-    :experience="experience"
-  />
+  <transition
+    enter-active-class="transition ease-out duration-700 translate-x-2/3"
+    enter-to-class="transform opacity-100 translate-x-0"
+    leave-active-class="transition ease-in duration-300"
+    leave-from-class="transform opacity-100"
+    leave-to-class="transform opacity-0 translate-x-2/3"
+  >
+    <Experience
+      v-if="openModal"
+      @close-button="() => (openModal = false)"
+      :experience="experience"
+    />
+  </transition>
 </template>
 
 <script setup>
@@ -115,4 +123,12 @@ const getDiff = (start, end) => {
     (totalMonth == 0 ? "" : totalMonth + 1 + " mos")
   );
 };
+
+watchEffect(() => {
+  useHead({
+    htmlAttrs: {
+      class: openModal.value ? "overflow-hidden" : "",
+    },
+  });
+});
 </script>

@@ -1,0 +1,26 @@
+{
+    "home": {
+        "title": "Hello, I Am Mohamed Full Stack Developer",
+        "title-1": "Hello,",
+        "title-2": "I Am {name}",
+        "title-3": "Full Stack Developer",
+        "description": "Create full-stack web development from scratch, repair old websites, and add a new twist to ancient sites."
+    },
+    "navbar": {
+        "signin": "Sign in",
+        "signup": "Signup",
+        "home": "home"
+    },
+    "signin": {
+        "signin": "Sign in",
+        "signup": "Signup",
+        "title": "Login",
+        "subtitle": "Use your <strong style='color: #ae051a'>DonateLife</strong> account",
+        "email": "Email",
+        "password": "Password"
+    },
+    "meta": {
+        "title": "DonateLife",
+        "description": "DonateLife (some description)"
+    }
+}

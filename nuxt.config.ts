@@ -14,15 +14,8 @@ export default defineNuxtConfig({
 				{ property: "og:image", content: "https://gzzgvwttrempaknfssha.supabase.co/storage/v1/object/public/images/site/logo.webp" },
 			],
 			link: [
-				{ rel: 'icon', type: 'image/png', href: 'https://gzzgvwttrempaknfssha.supabase.co/storage/v1/object/public/images/site/favicon.ico'}
+				{ rel: 'icon', type: 'image/png', href: 'https://gzzgvwttrempaknfssha.supabase.co/storage/v1/object/public/images/site/favicon.ico' }
 			],
-			htmlAttrs: {
-				lang: 'en',
-				dir: 'ltr',
-			},
-			bodyAttrs: {
-				// class: "",
-			},
 		}
 	},
 
@@ -31,6 +24,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/color-mode',
 		'nuxt-icon',
 		'@nuxtjs/supabase',
+		'@nuxtjs/i18n',
 		// '@nuxt/image-edge'
 	],
 
@@ -38,20 +32,29 @@ export default defineNuxtConfig({
 		cssPath: '~/assets/css/tailwind.css',
 		configPath: 'tailwind.config.ts',
 		exposeConfig: false,
-		// config: {},
 		injectPosition: 0,
 		viewer: true,
 	},
 
 	colorMode: {
-		preference: 'dark', // default value of $colorMode.preference
-		fallback: 'dark', // fallback value if not system preference found
+		preference: 'dark',
+		fallback: 'dark',
 		hid: 'nuxt-color-mode-script',
 		globalName: '__NUXT_COLOR_MODE__',
 		componentName: 'ColorScheme',
 		classPrefix: '',
 		classSuffix: '',
 		storageKey: 'nuxt-color-mode'
+	},
+
+	i18n: {
+		defaultLocale: 'en',
+		lazy: true,
+		langDir: 'locales/',
+		locales: [
+			{ code: 'ar', iso: 'ar-MA', name: 'العربية', dir: "rtl", file: "ar.json" },
+			{ code: 'en', iso: 'en-US', name: 'English', dir: "ltr", file: "en.json" },
+		],
 	},
 
 	runtimeConfig: {
@@ -61,9 +64,8 @@ export default defineNuxtConfig({
 		// supabaseKey: process.env.SUPABASE_KEY,
 	},
 
-	// typescript: {
-	// 	shim: false
-	// },
-
-	plugins: ['/plugins/mixins/aos.ts']
+	plugins: [
+		'/plugins/mixins/aos.ts',
+		'/plugins/i18n.ts'
+	]
 })

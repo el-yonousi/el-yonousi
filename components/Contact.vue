@@ -42,7 +42,7 @@
           <div class="w-full">
             <label for="email"></label>
             <input
-              class="dark:bg-dark-2 dark:text-dark-4 focus:outline-casetrue-1 outline-none  w-full rounded  md:text-lg text-base md:p-6 p-4"
+              class="appearance-none dark:bg-dark-2 dark:text-dark-4 focus:outline-casetrue-1 outline-none w-full rounded md:text-lg text-base md:p-6 p-4"
               autocomplete="off"
               placeholder="email"
               type="email"
@@ -55,7 +55,7 @@
           <div class="w-full">
             <label for="message"></label>
             <textarea
-              class="dark:bg-dark-2 dark:text-dark-4 focus:outline-casetrue-1 outline-none text-dark-2 w-full rounded  min-h-[100px] max-h-[300px] md:text-lg text-base md:p-6 p-4"
+              class="dark:bg-dark-2 dark:text-dark-4 focus:outline-casetrue-1 outline-none text-dark-2 w-full rounded min-h-[100px] max-h-[300px] md:text-lg text-base md:p-6 p-4"
               autocomplete="off"
               placeholder="message.."
               name="message"
@@ -66,7 +66,7 @@
           <div class="w-full">
             <button
               type="submit"
-              class="bg-clip-bg text-transparent bg-gradient-to-r from-casetrue-1 to-casetrue-2 capitalize dark:bg-casetrue-1 dark:text-dark-1 dark:hover:bg-casetrue-2 rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4 transition-all duration-300 ease-in-out"
+              class="bg-clip-bg text-transparent bg-gradient-to-r hover:from-casetrue-2 hover:to-casetrue-1 from-casetrue-1 to-casetrue-2 capitalize dark:bg-casetrue-1 dark:text-dark-1 dark:hover:bg-casetrue-2 rounded w-full font-bold cursor-pointer md:text-lg text-base md:p-6 p-4 transition-all duration-300 ease-in-out"
             >
               <span v-text="'send message'" />
               <span v-if="pending" v-text="'...'" class="animate-pulse" />
@@ -136,4 +136,28 @@ const handleSubmitForm = async () => {
   pending.value = false;
   form.value = {};
 };
+
+watchEffect(() => {
+  useHead({
+    htmlAttrs: {
+      class: openModal.value ? "overflow-hidden" : "",
+    },
+  });
+});
 </script>
+<style scoped>
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  @apply border border-dark-2 transition-all duration-300 ease-in-out;
+  -webkit-text-fill-color: #bfbfae;
+  -webkit-box-shadow: 0 0 0px 1000px #3f403b inset;
+  box-shadow: 0 0 0px 1000px #3f403b inset;
+}
+</style>

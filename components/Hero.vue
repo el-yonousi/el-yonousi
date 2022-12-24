@@ -29,6 +29,7 @@
 </template>
 
 <script setup>
+const { t } = useI18n();
 // const { vid_banner } = await $fetch("/api/banner/vid_banner");
 const { img_banner } = await $fetch("/api/banner/img_banner");
 </script>
