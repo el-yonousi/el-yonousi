@@ -39,7 +39,7 @@
                   <span
                     @click="openTestimonial(testimonial)"
                     draggable="false"
-                    class="p-0 m-0 leading-none"
+                    class="p-0 m-0 leading-none cursor-pointer"
                   >
                     <Icon
                       name="ic:baseline-remove-red-eye"

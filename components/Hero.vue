@@ -5,17 +5,18 @@
     :style="{ backgroundImage: `url('${img_banner}')` }"
   >
     <container class="z-10 flex flex-col gap-4 px-4 sm:px-6">
-      <Heading classes="flex flex-col gap-4 !text-4xl md:!text-5xl lg:!text-7xl mb-0">
-        <p class="dark:text-dark-4">Hello,</p>
-        <p class="dark:text-dark-4">
-          I am <span class="dark:text-casetrue-1">Mohamed</span>
+        <Heading classes="flex flex-col gap-4 !text-4xl md:!text-5xl lg:!text-7xl mb-0">
+          <p class="dark:text-dark-4 backdrop-blur-sm w-fit">Hello,</p>
+          <p class="dark:text-dark-4 backdrop-blur-sm w-fit">
+            I am <span class="dark:text-casetrue-1">Mohamed</span>
+          </p>
+          <p class="dark:text-dark-4 capitalize backdrop-blur-sm w-fit">full stack developer</p>
+        </Heading>
+        <p class="text-base sm:text-lg dark:text-dark-4 md:text-xl lg:mx-0 backdrop-blur-sm w-fit">
+          Create full-stack web development from scratch, repair old websites, and add a
+          new
+          <span class="dark:text-casetrue-1">twist</span> to ancient sites.
         </p>
-        <p class="dark:text-dark-4 capitalize">full stack developer</p>
-      </Heading>
-      <p class="text-base sm:text-lg dark:text-dark-4 md:text-xl lg:mx-0">
-        Create full-stack web development from scratch, repair old websites, and add a new
-        <span class="dark:text-casetrue-1">twist</span> to ancient sites.
-      </p>
     </container>
     <NuxtLink
       to="#whatcando"
